@@ -21,4 +21,9 @@ public class ListMateriActivity extends AppCompatActivity {
         Intent redirectDetailMateri = new Intent(this, DetailMateriActivity.class);
         startActivity(redirectDetailMateri);
     }
+
+    public void redirectSubmitMateri(View view) {
+        Intent redirectSubmitMateri = new Intent(this, SubmitCategoryActivity.class);
+        startActivity(redirectSubmitMateri);
+    }
 }
