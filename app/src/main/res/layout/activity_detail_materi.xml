@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".DetailMateriActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            tools:ignore="UselessParent"
+            android:layout_marginTop="27dp"
+            android:layout_marginHorizontal="28dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                tools:ignore="UselessParent"
+                android:layout_marginTop="27dp"
+                android:gravity="center"
+                >
+
+                <androidx.percentlayout.widget.PercentRelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+
+                    >
+
+                <LinearLayout
+                    android:id="@+id/garis_1"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+
+                    app:layout_widthPercent="20%"
+                    android:layout_centerVertical="true"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical">
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/image_back">
+
+                    </ImageView>
+
+                </LinearLayout>
+                <TextView
+                    android:id="@+id/text_or"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:text="Detail"
+                    app:layout_widthPercent="60%"
+                    android:textColor="@color/black"
+                    android:textSize="26dp"
+                    android:layout_toEndOf="@+id/garis_1"
+                    android:textAlignment="center"
+                    android:fontFamily="@font/poppins_semi_bold"
+                    />
+                </androidx.percentlayout.widget.PercentRelativeLayout>
+            </LinearLayout>
+
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:layout_marginTop="20dp"
+                >
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    >
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/image_detail_materi">
+                    </ImageView>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/detail_materi_content"
+                        android:textSize="18dp"
+                        android:textColor="#102755"
+                        android:justificationMode="inter_word"
+                        android:layout_marginRight="10dp"
+                        android:fontFamily="@font/poppins_regular">
+
+                    </TextView>
+
+                </LinearLayout>
+
+            </ScrollView>
+
+        </LinearLayout>
+    </RelativeLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
