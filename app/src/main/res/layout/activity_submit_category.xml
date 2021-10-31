@@ -1,0 +1,263 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SubmitCategoryActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:gravity="center_horizontal"
+            tools:ignore="UselessParent">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                tools:ignore="UselessParent"
+                android:layout_marginTop="20dp"
+                android:paddingHorizontal="27dp"
+                android:gravity="center"
+                >
+
+                <androidx.percentlayout.widget.PercentRelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+
+                    >
+
+                    <LinearLayout
+                        android:id="@+id/garis_1"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+
+                        app:layout_widthPercent="20%"
+                        android:layout_centerVertical="true"
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical">
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/image_back"
+                            android:contentDescription="@string/image_back">
+
+                        </ImageView>
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/text_or"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_toEndOf="@+id/garis_1"
+                        android:fontFamily="@font/poppins_semi_bold"
+                        android:text="@string/design"
+                        android:textAlignment="center"
+                        android:textColor="#102755"
+                        android:textSize="26sp"
+                        app:layout_widthPercent="60%" />
+                </androidx.percentlayout.widget.PercentRelativeLayout>
+            </LinearLayout>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/image_detail_category"
+                android:contentDescription="@string/image_submit_materi">
+            </ImageView>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center_horizontal"
+                android:orientation="vertical"
+                android:layout_marginTop="-40dp"
+                android:background="@drawable/rounded_layout">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/rounded_layout"
+                    android:layout_marginHorizontal="20dp"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical">
+                    <View
+                        android:layout_width="81dp"
+                        android:layout_height="9dp"
+                        android:background="#102755"
+                        android:layout_marginTop="5dp"
+                        />
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/available_time"
+                        android:textStyle="bold"
+                        android:fontFamily="@font/poppins_semi_bold"
+                        android:textSize="18sp"
+                        android:textColor="#333333"
+                        android:layout_marginTop="25dp"
+                        android:layout_marginBottom="5dp"/>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="84dp"
+                        android:paddingHorizontal="65dp">
+                        <androidx.percentlayout.widget.PercentRelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            >
+
+                            <LinearLayout
+                                android:id="@+id/teory_category"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_centerVertical="true"
+                                android:background="#FFFFFF"
+                                app:layout_widthPercent="49%"
+                                android:orientation="vertical"
+                                android:gravity="center">
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="18 h"
+                                    android:fontFamily="@font/poppins_semi_bold"
+                                    android:textSize="18dp"
+                                    android:textStyle="bold"
+                                    android:textColor="#102755"
+                                    android:gravity="center_horizontal"/>
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="Theory"
+                                    android:fontFamily="@font/poppins_regular"
+                                    android:textSize="16dp"
+                                    android:textColor="#102755"
+                                    android:layout_marginTop="-8dp"
+                                    android:gravity="center_horizontal"/>
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:id="@+id/line_category"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                app:layout_widthPercent="2%"
+                                android:orientation="horizontal"
+                                android:layout_toEndOf="@+id/teory_category"
+                                android:background="@color/white"
+                                android:gravity="center_vertical">
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="70dp"
+
+                                    android:background="#102755"/>
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_centerVertical="true"
+                                android:background="#FFFFFF"
+                                app:layout_widthPercent="49%"
+                                android:orientation="vertical"
+                                android:gravity="center"
+                                android:layout_toEndOf="@+id/line_category">
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="18 h"
+                                    android:fontFamily="@font/poppins_semi_bold"
+                                    android:textSize="18dp"
+                                    android:textStyle="bold"
+                                    android:textColor="#102755"
+                                    android:gravity="center_horizontal"/>
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="Practice"
+                                    android:fontFamily="@font/poppins_regular"
+                                    android:textSize="16dp"
+                                    android:textColor="#102755"
+                                    android:layout_marginTop="-8dp"
+                                    android:gravity="center_horizontal"/>
+                            </LinearLayout>
+
+                        </androidx.percentlayout.widget.PercentRelativeLayout>
+                    </LinearLayout>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Time"
+                        android:textStyle="bold"
+                        android:fontFamily="@font/poppins_semi_bold"
+                        android:textSize="14dp"
+                        android:textColor="#333333"
+                        android:layout_marginTop="25dp"/>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Design class lasts 6 hours a week"
+                        android:fontFamily="@font/poppins_regular"
+                        android:textSize="18dp"
+                        android:textColor="#333333"
+                        android:layout_marginTop="0dp"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Day"
+                        android:textStyle="bold"
+                        android:fontFamily="@font/poppins_semi_bold"
+                        android:textSize="14dp"
+                        android:textColor="#333333"
+                        android:layout_marginTop="10dp"/>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Design class lasts 3 days a week"
+                        android:fontFamily="@font/poppins_regular"
+                        android:textSize="18dp"
+                        android:textColor="#333333"
+                        android:layout_marginTop="0dp"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/schedule_date_time"
+                        android:textStyle="bold"
+                        android:fontFamily="@font/poppins_semi_bold"
+                        android:textSize="14dp"
+                        android:textColor="#333333"
+                        android:layout_marginTop="50dp"/>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="13 November, 2021 at 09.45 AM"
+                        android:fontFamily="@font/poppins_regular"
+                        android:textSize="18dp"
+                        android:textColor="#333333"
+                        android:layout_marginTop="0dp"/>
+
+                    <Button
+                        android:layout_width="match_parent"
+                        android:layout_height="57dp"
+                        android:backgroundTint="#102755"
+                        android:text="Save"
+                        android:textColor="@color/white"
+                        android:layout_marginTop="10dp">
+
+                    </Button>
+                </LinearLayout>
+
+            </LinearLayout>
+        </LinearLayout>
+    </RelativeLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

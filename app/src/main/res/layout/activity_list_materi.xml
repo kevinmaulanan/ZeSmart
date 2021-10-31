@@ -23,7 +23,7 @@
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
                 tools:ignore="UselessParent"
-                android:layout_marginTop="54dp"
+                android:layout_marginTop="20dp"
                 android:gravity="center"
                 >
 
@@ -85,7 +85,9 @@
                     android:backgroundTint="#102755"
                     android:text="Enroll Now"
                     android:textAllCaps="false"
-                    android:fontFamily="@font/poppins_semi_bold">
+                    android:textColor="@color/white"
+                    android:fontFamily="@font/poppins_semi_bold"
+                    android:onClick="redirectSubmitMateri">
                 </Button>
 
                 <LinearLayout
@@ -111,6 +113,7 @@
                             android:layout_height="50dp"
                             android:backgroundTint="#332A7C"
                             android:text="Detail Materi 1"
+                            android:textColor="@color/white"
                             android:textAllCaps="false"
                             android:fontFamily="@font/poppins_semi_bold">
                         </Button>
@@ -123,6 +126,7 @@
                             android:backgroundTint="#332A7C"
                             android:text="Detail Materi 2"
                             android:textAllCaps="false"
+                            android:textColor="@color/white"
                             android:fontFamily="@font/poppins_semi_bold">
                         </Button>
 
@@ -134,6 +138,7 @@
                             android:backgroundTint="#332A7C"
                             android:text="Detail Materi 3"
                             android:textAllCaps="false"
+                            android:textColor="@color/white"
                             android:fontFamily="@font/poppins_semi_bold">
                         </Button>
                     </LinearLayout>
