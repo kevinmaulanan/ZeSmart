@@ -68,16 +68,17 @@
 
 
                     >
+
                     <com.google.android.material.textfield.TextInputEditText
                         android:id="@+id/email"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:inputType="textEmailAddress"
                         android:background="#F6F7FA"
-                        android:paddingHorizontal="15dp"
-
                         android:fontFamily="@font/poppins_regular"
-                        />
+                        android:inputType="textEmailAddress"
+
+                        android:paddingHorizontal="15dp"
+                        tools:ignore="TouchTargetSizeCheck" />
 
                 </com.google.android.material.textfield.TextInputLayout>
 
@@ -93,16 +94,17 @@
                     app:hintTextColor="#102755"
                     app:boxStrokeWidthFocused="1dp"
                     >
+
                     <com.google.android.material.textfield.TextInputEditText
                         android:id="@+id/password"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:inputType="textPassword"
                         android:background="#F6F7FA"
-                        android:paddingHorizontal="15dp"
                         android:fontFamily="@font/poppins_regular"
+                        android:inputType="textPassword"
+                        android:paddingHorizontal="15dp"
 
-                        />
+                        tools:ignore="TouchTargetSizeCheck" />
 
                 </com.google.android.material.textfield.TextInputLayout>
 

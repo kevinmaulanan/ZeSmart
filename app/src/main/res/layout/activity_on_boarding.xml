@@ -78,9 +78,10 @@
                     <ImageView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:background="@drawable/image_ellipse_active"
                         android:layout_marginLeft="2.5dp"
-                        android:onClick="redirectOnBoarding2"/>
+                        android:background="@drawable/image_ellipse_active"
+                        android:onClick="redirectOnBoarding2"
+                        tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
 
 
                 </LinearLayout>
