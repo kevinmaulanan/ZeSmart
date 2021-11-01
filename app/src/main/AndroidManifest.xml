@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.ZeSmart">
         <activity
+            android:name=".SubmitCategoryActivity"
+            android:exported="true" />
+        <activity
             android:name=".ListMateriActivity"
             android:exported="true" />
         <activity

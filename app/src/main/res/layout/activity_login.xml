@@ -16,8 +16,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="vertical"
-            tools:ignore="UselessParent"
-            android:layout_marginTop="20dp">
+            tools:ignore="UselessParent">
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -135,10 +134,9 @@
                         android:id="@+id/garis_1"
                         android:layout_width="0dp"
                         android:layout_height="1dp"
-                        android:background="#102755"
-                        app:layout_widthPercent="45%"
                         android:layout_centerVertical="true"
-                      />
+                        android:background="#102755"
+                        app:layout_widthPercent="45%" />
 
                     <TextView
                         android:id="@+id/text_or"

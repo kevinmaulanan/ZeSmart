@@ -3,7 +3,10 @@ package com.example.zesmart;
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.Activity;
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.MotionEvent;
@@ -48,7 +51,16 @@ public class OnBoardingActivity extends AppCompatActivity {
     }
 
     public void redirectLogin(View view) {
+        saveData("onBoarding", "true");
         final LoadingClass loadingDialog = new LoadingClass(OnBoardingActivity.this);
         loadingDialog.startLoadingDialog(null,OnBoardingActivity.this, LoginActivity.class);
     }
+    public void saveData(String key, String data) {
+
+        SharedPreferences sharedPref = getSharedPreferences("MyPref", 0);
+        SharedPreferences.Editor editor = sharedPref.edit();
+        editor.putString(key, data);
+        editor.commit();
+    }
+
 }
