@@ -1,7 +1,10 @@
 package com.example.zesmart;
 
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.Fragment;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -9,11 +12,16 @@ import android.os.Handler;
 import android.text.TextUtils;
 import android.util.Log;
 import android.view.KeyEvent;
+import android.view.LayoutInflater;
+import android.view.MenuItem;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
@@ -23,6 +31,9 @@ public class LoginActivity extends AppCompatActivity {
     Pattern pattern;
     Matcher matcher;
     final String EMAIL_PATTERN = "^[_A-Za-z0-9-]+(\\.[_A-Za-z0-9-]+)*@[A-Za-z0-9]+(\\.[A-Za-z0-9]+)*(\\.[A-Za-z]{2,})$";
+    private View bottomNavigationView;
+    private Object navigation;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,13 +42,14 @@ public class LoginActivity extends AppCompatActivity {
         ActionBar actionBar = getSupportActionBar();
         actionBar.hide();
 
+
         try {
             TextView textRegister = findViewById(R.id.suruh_register);
 
             textRegister.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    Intent pindahKeRegister = new Intent(LoginActivity.this,RegisterActivity.class);
+                    Intent pindahKeRegister = new Intent(LoginActivity.this, RegisterActivity.class);
                     startActivity(pindahKeRegister);
                 }
             });
@@ -51,20 +63,24 @@ public class LoginActivity extends AppCompatActivity {
                     try {
                         checkLogin();
                         final LoadingClass loadingDialog = new LoadingClass(LoginActivity.this);
-                        loadingDialog.startLoadingDialog(null,LoginActivity.this, ListMateriActivity.class);
+                        loadingDialog.startLoadingDialog(null, LoginActivity.this, ListMateriActivity.class);
                     } catch (Exception e) {
                         Toast.makeText(LoginActivity.this, e.getMessage(), Toast.LENGTH_LONG).show();
                     }
                 }
             });
+
+
         } catch (Exception e) {
             Log.i("test", e.getMessage());
             Toast.makeText(this, "Error", Toast.LENGTH_LONG).show();
         }
+
+
     }
 
     public boolean onKeyDown(int key_code, KeyEvent key_event) {
-        if (key_code== KeyEvent.KEYCODE_BACK) {
+        if (key_code == KeyEvent.KEYCODE_BACK) {
             super.onKeyDown(key_code, key_event);
             return false;
         }
@@ -80,7 +96,7 @@ public class LoginActivity extends AppCompatActivity {
             pattern = Pattern.compile(EMAIL_PATTERN);
             matcher = pattern.matcher(getEmail);
             Log.i("passowrd", getPassword);
-            Log.i("email", getEmail + "t" );
+            Log.i("email", getEmail + "t");
             Boolean checkEmail = TextUtils.equals(getEmail, "superadmin@gmail.com");
             Boolean checkPassowrd = TextUtils.equals(getPassword, "pass123");
 
@@ -95,5 +111,36 @@ public class LoginActivity extends AppCompatActivity {
         } catch (Exception e) {
             throw (e);
         }
+
+        BottomNavigationView buttomNavigationView;
+        final BottomNavigationView.OnNavigationItemSelectedListener navigation = new BottomNavigationView.OnNavigationItemSelectedListener() {
+            @Override
+            public boolean onNavigationItemSelected(MenuItem menuItem) {
+                Fragment f = null;
+                switch (menuItem.getItemId()) {
+                    case R.id.menu_dashboard:
+                        f = new Fragment();
+                        break;
+                    case R.id.menu_activity:
+                        f = new FragmentActivity();
+                        break;
+                    case R.id.menu_schedule:
+                        f = new FragmentSchedule();
+                        break;
+                    case R.id.menu_profile:
+                        f = new FragmentProfile();
+                        break;
+                }
+                getSupportFragmentManager().beginTransaction().replace(R.id.container_fragment, f).commit();
+                return true;
+            }
+        };
+
+        setContentView(R.layout.activity_main);
+        bottomNavigationView = findViewById(R.id.bottom_navigation_menu);
+        bottomNavigationView.setOnClickListener((View.OnClickListener) navigation);
+
     }
+
+
 }
