@@ -56,11 +56,13 @@ public class OnBoardingActivity extends AppCompatActivity {
         loadingDialog.startLoadingDialog(null,OnBoardingActivity.this, LoginActivity.class);
     }
     public void saveData(String key, String data) {
-
+        // Menyimpan data secara local
+    /// penanda bahwa untuk melewati onboarding
         SharedPreferences sharedPref = getSharedPreferences("MyPref", 0);
         SharedPreferences.Editor editor = sharedPref.edit();
         editor.putString(key, data);
         editor.commit();
     }
+
 
 }
