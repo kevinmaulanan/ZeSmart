@@ -6,10 +6,14 @@
     android:layout_height="match_parent"
     tools:context=".DetailMateriActivity">
 
-    <RelativeLayout
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        >
+        android:layout_marginHorizontal="28dp"
+        android:layout_marginVertical="20dp"
+        android:orientation="vertical">
+
+
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -17,7 +21,9 @@
             android:orientation="vertical"
             tools:ignore="UselessParent"
             android:layout_marginTop="20dp"
-            android:layout_marginHorizontal="28dp">
+            >
+
+
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -64,42 +70,42 @@
                         app:layout_widthPercent="60%" />
                 </androidx.percentlayout.widget.PercentRelativeLayout>
             </LinearLayout>
-
-
-            <ScrollView
+            <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:orientation="vertical"
-                android:layout_marginTop="20dp"
+                android:layout_height="wrap_content"
                 >
-                <LinearLayout
+                <com.google.android.material.tabs.TabLayout
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:orientation="vertical"
+                    android:layout_height="wrap_content"
+                    app:tabMode="fixed"
+                    android:layout_marginTop="30dp"
+                    android:id="@+id/tab_layout"
                     >
 
-                    <ImageView
+                    <com.google.android.material.tabs.TabItem
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:background="@drawable/image_detail_materi">
-                    </ImageView>
-                    <TextView
-                        android:layout_width="match_parent"
+                        android:text="Materi"
+                        tools:ignore="UsingOnClickInXml" />
+
+                    <com.google.android.material.tabs.TabItem
+                        android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="@string/detail_materi_content"
-                        android:textSize="18dp"
-                        android:textColor="#102755"
-                        android:justificationMode="inter_word"
-                        android:layout_marginRight="10dp"
-                        android:fontFamily="@font/poppins_regular">
+                        android:text="Video"
+                        tools:ignore="UsingOnClickInXml" />
 
-                    </TextView>
 
-                </LinearLayout>
+                </com.google.android.material.tabs.TabLayout>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/tabs"
+                android:orientation="vertical"></LinearLayout>
 
-            </ScrollView>
+
 
         </LinearLayout>
-    </RelativeLayout>
+    </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

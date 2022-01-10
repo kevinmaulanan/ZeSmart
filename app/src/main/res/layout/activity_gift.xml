@@ -1,0 +1,608 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".GiftActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginHorizontal="20dp">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:gravity="center"
+            android:orientation="horizontal"
+            tools:ignore="MissingConstraints">
+
+            <androidx.percentlayout.widget.PercentRelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                >
+                <LinearLayout
+                    android:id="@+id/garis_1"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+
+                    android:layout_centerVertical="true"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    app:layout_widthPercent="20%">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/image_back">
+
+                    </ImageView>
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/text_or"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_toEndOf="@+id/garis_1"
+                    android:fontFamily="@font/poppins_semi_bold"
+                    android:text="Zestar Gift"
+                    android:textAlignment="center"
+                    android:textColor="@color/black"
+                    android:textSize="26dp"
+                    app:layout_widthPercent="60%" />
+            </androidx.percentlayout.widget.PercentRelativeLayout>
+        </LinearLayout>
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="36dp"
+            android:fillViewport="true"
+            >
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                >
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="20dp"
+                    android:orientation="vertical">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="80dp"
+                        android:orientation="horizontal"
+                        android:layout_marginBottom="11dp">
+                        <LinearLayout
+                            android:layout_width="100dp"
+                            android:layout_height="match_parent"
+                            android:background="@drawable/rounded_layout_full"
+                            >
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_margin="10dp"
+                                android:background="@drawable/image_onboarding1"
+                                />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="10dp"
+                            android:orientation="vertical"
+                            android:gravity="center_vertical"
+                            >
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Zestart - T-Shirt"
+                                android:textColor="#102755"
+                                android:textSize="16sp"
+                                android:textStyle="bold"
+                                android:fontFamily="@font/poppins_semi_bold"
+                                >
+                            </TextView>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="+10000 points"
+                                android:textColor="#102755"
+                                android:textSize="12sp"
+                                android:textStyle="bold"
+                                android:fontFamily="@font/poppins_regular"
+                                >
+                            </TextView>
+
+                        </LinearLayout>
+                    </LinearLayout>
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1.5dp"
+                        android:background="#102755"/>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="20dp"
+                    android:orientation="vertical">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="80dp"
+                        android:orientation="horizontal"
+                        android:layout_marginBottom="12dp">
+                        <LinearLayout
+                            android:layout_width="100dp"
+                            android:layout_height="match_parent"
+                            android:background="@drawable/rounded_layout_full"
+                            >
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_margin="10dp"
+                                android:background="@drawable/image_onboarding1"
+                                />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="10dp"
+                            android:orientation="vertical"
+                            android:gravity="center_vertical"
+                            >
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Zestart - T-Shirt"
+                                android:textColor="#102755"
+                                android:textSize="16sp"
+                                android:textStyle="bold"
+                                android:fontFamily="@font/poppins_semi_bold"
+                                >
+                            </TextView>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="+10000 points"
+                                android:textColor="#102755"
+                                android:textSize="12sp"
+                                android:textStyle="bold"
+                                android:fontFamily="@font/poppins_regular"
+                                >
+                            </TextView>
+
+                        </LinearLayout>
+                    </LinearLayout>
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1.5dp"
+                        android:background="#102755"/>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="20dp"
+                    android:orientation="vertical">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="80dp"
+                        android:orientation="horizontal"
+                        android:layout_marginBottom="11dp">
+                        <LinearLayout
+                            android:layout_width="100dp"
+                            android:layout_height="match_parent"
+                            android:background="@drawable/rounded_layout_full"
+                            >
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_margin="10dp"
+                                android:background="@drawable/image_onboarding1"
+                                />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="10dp"
+                            android:orientation="vertical"
+                            android:gravity="center_vertical"
+                            >
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Zestart - T-Shirt"
+                                android:textColor="#102755"
+                                android:textSize="16sp"
+                                android:textStyle="bold"
+                                android:fontFamily="@font/poppins_semi_bold"
+                                >
+                            </TextView>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="+10000 points"
+                                android:textColor="#102755"
+                                android:textSize="12sp"
+                                android:textStyle="bold"
+                                android:fontFamily="@font/poppins_regular"
+                                >
+                            </TextView>
+
+                        </LinearLayout>
+                    </LinearLayout>
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1.5dp"
+                        android:background="#102755"/>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="20dp"
+                    android:orientation="vertical">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="80dp"
+                        android:orientation="horizontal"
+                        android:layout_marginBottom="12dp">
+                        <LinearLayout
+                            android:layout_width="100dp"
+                            android:layout_height="match_parent"
+                            android:background="@drawable/rounded_layout_full"
+                            >
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_margin="10dp"
+                                android:background="@drawable/image_onboarding1"
+                                />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="10dp"
+                            android:orientation="vertical"
+                            android:gravity="center_vertical"
+                            >
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Zestart - T-Shirt"
+                                android:textColor="#102755"
+                                android:textSize="16sp"
+                                android:textStyle="bold"
+                                android:fontFamily="@font/poppins_semi_bold"
+                                >
+                            </TextView>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="+10000 points"
+                                android:textColor="#102755"
+                                android:textSize="12sp"
+                                android:textStyle="bold"
+                                android:fontFamily="@font/poppins_regular"
+                                >
+                            </TextView>
+
+                        </LinearLayout>
+                    </LinearLayout>
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1.5dp"
+                        android:background="#102755"/>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="20dp"
+                    android:orientation="vertical">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="80dp"
+                        android:orientation="horizontal"
+                        android:layout_marginBottom="12dp">
+                        <LinearLayout
+                            android:layout_width="100dp"
+                            android:layout_height="match_parent"
+                            android:background="@drawable/rounded_layout_full"
+                            >
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_margin="10dp"
+                                android:background="@drawable/image_onboarding1"
+                                />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="10dp"
+                            android:orientation="vertical"
+                            android:gravity="center_vertical"
+                            >
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Zestart - T-Shirt"
+                                android:textColor="#102755"
+                                android:textSize="16sp"
+                                android:textStyle="bold"
+                                android:fontFamily="@font/poppins_semi_bold"
+                                >
+                            </TextView>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="+10000 points"
+                                android:textColor="#102755"
+                                android:textSize="12sp"
+                                android:textStyle="bold"
+                                android:fontFamily="@font/poppins_regular"
+                                >
+                            </TextView>
+
+                        </LinearLayout>
+                    </LinearLayout>
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1.5dp"
+                        android:background="#102755"/>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="20dp"
+                    android:orientation="vertical">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="80dp"
+                        android:orientation="horizontal"
+                        android:layout_marginBottom="11dp">
+                        <LinearLayout
+                            android:layout_width="100dp"
+                            android:layout_height="match_parent"
+                            android:background="@drawable/rounded_layout_full"
+                            >
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_margin="10dp"
+                                android:background="@drawable/image_onboarding1"
+                                />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="10dp"
+                            android:orientation="vertical"
+                            android:gravity="center_vertical"
+                            >
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Zestart - T-Shirt"
+                                android:textColor="#102755"
+                                android:textSize="16sp"
+                                android:textStyle="bold"
+                                android:fontFamily="@font/poppins_semi_bold"
+                                >
+                            </TextView>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="+10000 points"
+                                android:textColor="#102755"
+                                android:textSize="12sp"
+                                android:textStyle="bold"
+                                android:fontFamily="@font/poppins_regular"
+                                >
+                            </TextView>
+
+                        </LinearLayout>
+                    </LinearLayout>
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1.5dp"
+                        android:background="#102755"/>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="20dp"
+                    android:orientation="vertical">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="80dp"
+                        android:orientation="horizontal"
+                        android:layout_marginBottom="12dp">
+                        <LinearLayout
+                            android:layout_width="100dp"
+                            android:layout_height="match_parent"
+                            android:background="@drawable/rounded_layout_full"
+                            >
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_margin="10dp"
+                                android:background="@drawable/image_onboarding1"
+                                />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="10dp"
+                            android:orientation="vertical"
+                            android:gravity="center_vertical"
+                            >
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Zestart - T-Shirt"
+                                android:textColor="#102755"
+                                android:textSize="16sp"
+                                android:textStyle="bold"
+                                android:fontFamily="@font/poppins_semi_bold"
+                                >
+                            </TextView>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="+10000 points"
+                                android:textColor="#102755"
+                                android:textSize="12sp"
+                                android:textStyle="bold"
+                                android:fontFamily="@font/poppins_regular"
+                                >
+                            </TextView>
+
+                        </LinearLayout>
+                    </LinearLayout>
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1.5dp"
+                        android:background="#102755"/>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="20dp"
+                    android:orientation="vertical">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="80dp"
+                        android:orientation="horizontal"
+                        android:layout_marginBottom="12dp">
+                        <LinearLayout
+                            android:layout_width="100dp"
+                            android:layout_height="match_parent"
+                            android:background="@drawable/rounded_layout_full"
+                            >
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_margin="10dp"
+                                android:background="@drawable/image_onboarding1"
+                                />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="10dp"
+                            android:orientation="vertical"
+                            android:gravity="center_vertical"
+                            >
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Zestart - T-Shirt"
+                                android:textColor="#102755"
+                                android:textSize="16sp"
+                                android:textStyle="bold"
+                                android:fontFamily="@font/poppins_semi_bold"
+                                >
+                            </TextView>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="+10000 points"
+                                android:textColor="#102755"
+                                android:textSize="12sp"
+                                android:textStyle="bold"
+                                android:fontFamily="@font/poppins_regular"
+                                >
+                            </TextView>
+
+                        </LinearLayout>
+                    </LinearLayout>
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1.5dp"
+                        android:background="#102755"/>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="20dp"
+                    android:orientation="vertical">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="80dp"
+                        android:orientation="horizontal"
+                        android:layout_marginBottom="11dp">
+                        <LinearLayout
+                            android:layout_width="100dp"
+                            android:layout_height="match_parent"
+                            android:background="@drawable/rounded_layout_full"
+                            >
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_margin="10dp"
+                                android:background="@drawable/image_onboarding1"
+                                />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="10dp"
+                            android:orientation="vertical"
+                            android:gravity="center_vertical"
+                            >
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Zestart - T-Shirt"
+                                android:textColor="#102755"
+                                android:textSize="16sp"
+                                android:textStyle="bold"
+                                android:fontFamily="@font/poppins_semi_bold"
+                                >
+                            </TextView>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="+10000 points"
+                                android:textColor="#102755"
+                                android:textSize="12sp"
+                                android:textStyle="bold"
+                                android:fontFamily="@font/poppins_regular"
+                                >
+                            </TextView>
+
+                        </LinearLayout>
+                    </LinearLayout>
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1.5dp"
+                        android:background="#102755"/>
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </ScrollView>
+    </LinearLayout>
+
+
+</LinearLayout>

@@ -5,7 +5,6 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.os.Handler;
 import android.text.TextUtils;
 import android.util.Log;
 import android.view.KeyEvent;
@@ -14,6 +13,8 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import com.example.zesmart.auth.Auth;
 
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
@@ -45,16 +46,11 @@ public class LoginActivity extends AppCompatActivity {
 
             Button buttonLogin = findViewById(R.id.buttonLogin);
 
-            buttonLogin.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    try {
-                        checkLogin();
-                        final LoadingClass loadingDialog = new LoadingClass(LoginActivity.this);
-                        loadingDialog.startLoadingDialog(null,LoginActivity.this, ListMateriActivity.class);
-                    } catch (Exception e) {
-                        Toast.makeText(LoginActivity.this, e.getMessage(), Toast.LENGTH_LONG).show();
-                    }
+            buttonLogin.setOnClickListener(v -> {
+                try {
+                    doLogin();
+                } catch (Exception e) {
+                    Toast.makeText(LoginActivity.this, e.getMessage(), Toast.LENGTH_LONG).show();
                 }
             });
         } catch (Exception e) {
@@ -71,7 +67,7 @@ public class LoginActivity extends AppCompatActivity {
         return false;
     }
 
-    void checkLogin() throws Exception {
+    void doLogin() throws Exception {
         try {
             EditText password = findViewById(R.id.password);
             String getPassword = password.getText().toString();
@@ -79,15 +75,16 @@ public class LoginActivity extends AppCompatActivity {
             String getEmail = email.getText().toString();
             pattern = Pattern.compile(EMAIL_PATTERN);
             matcher = pattern.matcher(getEmail);
-            Log.i("passowrd", getPassword);
-            Log.i("email", getEmail + "t" );
-            Boolean checkEmail = TextUtils.equals(getEmail, "superadmin@gmail.com");
-            Boolean checkPassowrd = TextUtils.equals(getPassword, "pass123");
+
 
             if (matcher.matches()) {
-                if (!checkEmail || !checkPassowrd) {
+                if (getEmail == null && getPassword == null) {
                     throw new Exception("Email atau password salah!");
                 }
+
+                final Auth auth = new Auth(LoginActivity.this);
+                auth.doLogin(getEmail, getPassword);
+
             } else {
                 throw new Exception("Format email salah!");
             }

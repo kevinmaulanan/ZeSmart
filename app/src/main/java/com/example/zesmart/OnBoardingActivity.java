@@ -8,10 +8,14 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.os.Handler;
 import android.util.Log;
 import android.view.MotionEvent;
 import android.view.View;
 import android.widget.Button;
+
+import com.example.zesmart.auth.Auth;
+
 public class OnBoardingActivity extends AppCompatActivity {
     float x1, y1, x2, y2;
     Button button;
@@ -27,6 +31,7 @@ public class OnBoardingActivity extends AppCompatActivity {
     }
 
     public boolean onTouchEvent(MotionEvent touchEvent){
+        Log.i("test", String.valueOf(touchEvent.getAction() == MotionEvent.ACTION_DOWN));
         switch(touchEvent.getAction()){
             case MotionEvent.ACTION_DOWN:
                 x1 = touchEvent.getX();
@@ -53,7 +58,16 @@ public class OnBoardingActivity extends AppCompatActivity {
     public void redirectLogin(View view) {
         saveData("onBoarding", "true");
         final LoadingClass loadingDialog = new LoadingClass(OnBoardingActivity.this);
-        loadingDialog.startLoadingDialog(null,OnBoardingActivity.this, LoginActivity.class);
+        loadingDialog.startLoadingDialog(null);
+        Handler handler = new Handler();
+        handler.postDelayed(new Runnable() {
+            @Override
+            public void run() {
+                loadingDialog.dissmissDialog();
+                Intent redirectLogin = new Intent(OnBoardingActivity.this, LoginActivity.class);
+                startActivity(redirectLogin);
+            }
+        }, 1500);
     }
     public void saveData(String key, String data) {
 

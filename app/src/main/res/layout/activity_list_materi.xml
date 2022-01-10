@@ -1,152 +1,162 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context=".ListMateriActivity">
 
-    <RelativeLayout
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        >
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginHorizontal="20dp">
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="vertical"
-            android:gravity="center_horizontal"
-            android:paddingHorizontal="27dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:gravity="center"
+            android:orientation="horizontal"
+            tools:ignore="MissingConstraints">
 
-            >
-            <LinearLayout
+            <androidx.percentlayout.widget.PercentRelativeLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                tools:ignore="UselessParent"
-                android:layout_marginTop="20dp"
-                android:gravity="center"
+                android:layout_height="40dp"
+
                 >
 
-                <androidx.percentlayout.widget.PercentRelativeLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="40dp"
+                <LinearLayout
+                    android:id="@+id/garis_1"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
 
-                    >
+                    android:layout_centerVertical="true"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    app:layout_widthPercent="20%">
 
-                    <LinearLayout
-                        android:id="@+id/garis_1"
-                        android:layout_width="0dp"
-                        android:layout_height="match_parent"
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/image_back">
 
-                        app:layout_widthPercent="20%"
-                        android:layout_centerVertical="true"
-                        android:orientation="horizontal"
-                        android:gravity="center_vertical">
-                        <ImageView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:background="@drawable/image_back">
+                    </ImageView>
 
-                        </ImageView>
+                </LinearLayout>
 
-                    </LinearLayout>
-                    <TextView
-                        android:id="@+id/text_or"
-                        android:layout_width="0dp"
-                        android:layout_height="match_parent"
-                        android:text="Design"
-                        app:layout_widthPercent="60%"
-                        android:textColor="@color/black"
-                        android:textSize="26dp"
-                        android:layout_toEndOf="@+id/garis_1"
-                        android:textAlignment="center"
-                        android:fontFamily="@font/poppins_semi_bold"
-                        />
-                </androidx.percentlayout.widget.PercentRelativeLayout>
-            </LinearLayout>
+                <TextView
+                    android:id="@+id/text_or"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_toEndOf="@+id/garis_1"
+                    android:fontFamily="@font/poppins_semi_bold"
+                    android:text="Design"
+                    android:textAlignment="center"
+                    android:textColor="@color/black"
+                    android:textSize="26dp"
+                    app:layout_widthPercent="60%" />
+            </androidx.percentlayout.widget.PercentRelativeLayout>
+        </LinearLayout>
 
-            <ImageView
-                android:layout_marginTop="20dp"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:background="@drawable/image_list_materi">
-            </ImageView>
 
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fillViewport="true">
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:gravity="center_horizontal"
+                android:layout_height="wrap_content"
                 android:orientation="vertical"
-                android:layout_marginTop="50dp">
-                <Button
-                    android:layout_width="200dp"
-                    android:layout_height="50dp"
-                    app:cornerRadius="15dp"
-                    android:backgroundTint="#102755"
-                    android:text="Enroll Now"
-                    android:textAllCaps="false"
-                    android:textColor="@color/white"
-                    android:fontFamily="@font/poppins_semi_bold"
-                    android:onClick="redirectSubmitMateri">
-                </Button>
+                android:gravity="center"
+                tools:ignore="MissingConstraints"
+                android:layout_marginTop="29dp">
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:background="@drawable/image_list_materi"></ImageView>
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:background="#E2EDFC"
-                    android:layout_marginTop="-25dp"
-                    android:layout_marginBottom="20dp"
-                    app:cornerRadius="15dp">
+                    android:layout_marginTop="50dp"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical">
+
+                    <Button
+                        android:layout_width="200dp"
+                        android:layout_height="50dp"
+                        android:backgroundTint="#102755"
+                        android:fontFamily="@font/poppins_semi_bold"
+                        android:onClick="redirectSubmitMateri"
+                        android:text="Enroll Now"
+                        android:textAllCaps="false"
+                        android:textColor="@color/white"
+                        app:cornerRadius="15dp"></Button>
+
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:paddingHorizontal="30dp"
-                        android:paddingTop="30dp"
+                        android:layout_marginTop="-25dp"
+                        android:layout_marginBottom="20dp"
+                        android:paddingBottom="20dp"
+                        android:background="#E2EDFC"
+                        app:cornerRadius="15dp">
 
-                        android:orientation="vertical"
-
-                        android:gravity="center_horizontal">
-                        <Button
-
-                            android:onClick="redirectDetailMateri"
+                        <LinearLayout
                             android:layout_width="match_parent"
-                            android:layout_height="50dp"
-                            android:backgroundTint="#332A7C"
-                            android:text="Detail Materi 1"
-                            android:textColor="@color/white"
-                            android:textAllCaps="false"
-                            android:fontFamily="@font/poppins_semi_bold">
-                        </Button>
+                            android:layout_height="match_parent"
+                            android:gravity="center_horizontal"
+                            android:orientation="vertical"
 
-                        <Button
-                            android:layout_marginTop="10dp"
-                            android:onClick="redirectDetailMateri"
-                            android:layout_width="match_parent"
-                            android:layout_height="50dp"
-                            android:backgroundTint="#332A7C"
-                            android:text="Detail Materi 2"
-                            android:textAllCaps="false"
-                            android:textColor="@color/white"
-                            android:fontFamily="@font/poppins_semi_bold">
-                        </Button>
+                            android:paddingHorizontal="30dp"
 
-                        <Button
-                            android:layout_marginTop="10dp"
-                            android:onClick="redirectDetailMateri"
-                            android:layout_width="match_parent"
-                            android:layout_height="50dp"
-                            android:backgroundTint="#332A7C"
-                            android:text="Detail Materi 3"
-                            android:textAllCaps="false"
-                            android:textColor="@color/white"
-                            android:fontFamily="@font/poppins_semi_bold">
-                        </Button>
+                            android:paddingTop="30dp">
+
+                            <Button
+
+                                android:layout_width="match_parent"
+                                android:layout_height="50dp"
+                                android:backgroundTint="#332A7C"
+                                android:fontFamily="@font/poppins_semi_bold"
+                                android:onClick="redirectDetailMateri"
+                                android:text="Detail Materi 1"
+                                android:textAllCaps="false"
+                                android:textColor="@color/white"></Button>
+
+                            <Button
+                                android:layout_width="match_parent"
+                                android:layout_height="50dp"
+                                android:layout_marginTop="10dp"
+                                android:backgroundTint="#332A7C"
+                                android:fontFamily="@font/poppins_semi_bold"
+                                android:onClick="redirectDetailMateri"
+                                android:text="Detail Materi 2"
+                                android:textAllCaps="false"
+                                android:textColor="@color/white"></Button>
+
+                            <Button
+                                android:layout_width="match_parent"
+                                android:layout_height="50dp"
+                                android:layout_marginTop="10dp"
+                                android:backgroundTint="#332A7C"
+                                android:fontFamily="@font/poppins_semi_bold"
+                                android:onClick="redirectDetailMateri"
+                                android:text="Detail Materi 3"
+                                android:textAllCaps="false"
+                                android:textColor="@color/white"></Button>
+
+                        </LinearLayout>
+
+
                     </LinearLayout>
-
-
                 </LinearLayout>
             </LinearLayout>
-        </LinearLayout>
-    </RelativeLayout>
+        </ScrollView>
+    </LinearLayout>
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+</LinearLayout>

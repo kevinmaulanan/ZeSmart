@@ -10,6 +10,10 @@ import android.os.Handler;
 import android.text.TextUtils;
 import android.util.Log;
 
+import com.example.zesmart.auth.Auth;
+
+import org.json.JSONObject;
+
 public class MainActivity extends AppCompatActivity {
 
     @Override
@@ -25,13 +29,17 @@ public class MainActivity extends AppCompatActivity {
             SharedPreferences sharedPref = getSharedPreferences("MyPref", 0);
             String checkOnBoarding = sharedPref.getString("onBoarding", null);
             if (TextUtils.equals(checkOnBoarding, "true")) {
-                redirect = new Intent(MainActivity.this, LoginActivity.class);
+                final Auth auth = new Auth(MainActivity.this);
+                auth.getUserLogin();
             } else {
                 redirect = new Intent(MainActivity.this, OnBoardingActivity.class);
+                startActivity(redirect);
             }
 
-            startActivity(redirect);
+
             finish();
         }, 3000);
     }
+    
+
 }

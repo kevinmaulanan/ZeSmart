@@ -15,29 +15,26 @@ public class LoadingClass {
         activity = myActivity;
     }
 
-    void startLoadingDialog(Runnable runnable, Activity activityNow, Class classNow) {
-        if (runnable != null) runnable.run();
+    public void startLoadingDialog(Runnable runnable) {
+        try {
+            if (runnable != null) runnable.run();
 
-        AlertDialog.Builder builder = new AlertDialog.Builder(activity);
+            AlertDialog.Builder builder = new AlertDialog.Builder(activity);
 
-        LayoutInflater inflater = activity.getLayoutInflater();
-        builder.setView(inflater.inflate(R.layout.custom_dialog, null));
-        builder.setCancelable(true);
-        dialog = builder.create();
-        dialog.show();
+            LayoutInflater inflater = activity.getLayoutInflater();
+            builder.setView(inflater.inflate(R.layout.custom_dialog, null));
+            builder.setCancelable(true);
+            dialog = builder.create();
+            dialog.show();
 
-        Handler handler = new Handler();
-        handler.postDelayed(new Runnable() {
-            @Override
-            public void run() {
-                dissmissDialog();
-                Intent pindahKeDetailMater = new Intent(activityNow, classNow);
-                activity.startActivity(pindahKeDetailMater);
-            }
-        }, 1500);
+
+        } catch (Exception e) {
+            throw e;
+        }
+
     }
 
-    void dissmissDialog() {
+    public void dissmissDialog() {
         dialog.dismiss();
     }
 }

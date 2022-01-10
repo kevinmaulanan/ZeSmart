@@ -4,101 +4,97 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context=".OnBoardingActivity">
 
-    <RelativeLayout
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:orientation="vertical"
+        android:gravity="center_vertical">
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:orientation="vertical">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:textColor="#4E585E"
+                android:textSize="24dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="Enjoy Your Class"
+                android:textColor="#4E585E"
+                android:textSize="24dp"
+                android:textStyle="bold"
+                android:fontFamily="@font/poppins_semi_bold"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:paddingHorizontal="30dp"
+                android:text="Best and popular apps for live education course from home"
+                android:textColor="#102755"
+                android:textSize="15dp"
+                android:gravity="center"
+                android:fontFamily="@font/poppins_regular"
+                />
+
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/image_onboarding2"/>
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_gravity="center"
-                android:orientation="vertical"
-                android:gravity="center_vertical">
-
-                <TextView
+                android:layout_height="56dp"
+                android:layout_marginHorizontal="16dp">
+                <Button
+                    android:id="@+id/buttonSubmitLogin"
+                    android:onClick="redirectLogin"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:gravity="center"
-                    android:textColor="#4E585E"
-                    android:textSize="24dp"
-                    android:textStyle="bold" />
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:gravity="center"
-                    android:text="Enjoy Your Class"
-                    android:textColor="#4E585E"
-                    android:textSize="24dp"
-                    android:textStyle="bold"
-                    android:fontFamily="@font/poppins_semi_bold"/>
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="16dp"
-                    android:paddingHorizontal="30dp"
-                    android:text="Best and popular apps for live education course from home"
-                    android:textColor="#102755"
-                    android:textSize="15dp"
-                    android:gravity="center"
-                    android:fontFamily="@font/poppins_regular"
+                    android:layout_height="match_parent"
+                    android:backgroundTint="#102755"
+                    android:text="GET STARTED"
+                    android:textColor="@color/white"
+                    android:textSize="16dp"
                     />
-
-
-                <ImageView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:background="@drawable/image_onboarding2"/>
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="56dp"
-                    android:layout_marginHorizontal="16dp">
-                    <Button
-                        android:id="@+id/buttonSubmitLogin"
-                        android:onClick="redirectLogin"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:backgroundTint="#102755"
-                        android:text="GET STARTED"
-                        android:textColor="@color/white"
-                        android:textSize="16dp"
-                        />
-                </LinearLayout>
-
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="56dp"
-                    android:orientation="horizontal"
-
-                    android:gravity="center">
-
-                    <ImageView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginRight="2.5dp"
-                        android:background="@drawable/image_ellipse_active"
-                        android:onClick="redirectOnBoarding1"/>
-
-                    <ImageView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:background="@drawable/image_ellipse_nonactive"
-                        android:layout_marginLeft="2.5dp"/>
-
-
-                </LinearLayout>
             </LinearLayout>
 
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:orientation="horizontal"
+
+                android:gravity="center">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="2.5dp"
+                    android:background="@drawable/image_ellipse_active"
+                    android:onClick="redirectOnBoarding1"/>
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/image_ellipse_nonactive"
+                    android:layout_marginLeft="2.5dp"/>
+
+
+            </LinearLayout>
         </LinearLayout>
-    </RelativeLayout>
+
+    </LinearLayout>
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".SubDetailMateriActivity"
+    >
+    
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:layout_gravity="center_horizontal">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/detail_matari_background">
+
+            </ImageView>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal">
+
+                <ImageView
+                    android:layout_width="320dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="67dp"
+
+                    android:background="@drawable/g56">
+
+                </ImageView>
+            </LinearLayout>
+
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_marginTop="57dp"
+                android:layout_marginBottom="-51dp"
+                android:background="@drawable/detail_matari_image">
+
+            </ImageView>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:gravity="center"
+                android:orientation="horizontal"
+                tools:ignore="MissingConstraints">
+
+                <androidx.percentlayout.widget.PercentRelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginHorizontal="20dp"
+                    >
+
+                    <LinearLayout
+                        android:id="@+id/garis_1"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+
+                        android:layout_centerVertical="true"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        app:layout_widthPercent="20%">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/image_back">
+
+                        </ImageView>
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/text_or"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_toEndOf="@+id/garis_1"
+                        android:fontFamily="@font/poppins_semi_bold"
+                        android:text="Learning Materials"
+                        android:textAlignment="center"
+                        android:textColor="@color/black"
+                        android:textSize="24dp"
+                        app:layout_widthPercent="70%" />
+                </androidx.percentlayout.widget.PercentRelativeLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:layout_alignParentBottom="true"
+                android:gravity="center"
+
+                android:orientation="horizontal"
+                android:layout_marginTop="50dp"
+                android:layout_marginBottom="207dp"
+                tools:ignore="MissingConstraints">
+
+                <Button
+                    android:layout_width="220dp"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/rounded_layout_black"
+                    android:text="Thanyawee \n UI / UX Design"
+                    android:textColor="#B5D4FF"
+                    android:textSize="18dp"
+                    android:textAllCaps="false"
+                    android:textStyle="bold"
+                    android:lineHeight="25dp">
+
+                </Button>
+            </LinearLayout>
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            
+        </LinearLayout>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginTop="20dp">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    android:backgroundTint="#E2EDFC"
+                    android:fontFamily="@font/poppins_semi_bold"
+                    android:onClick="redirectSubDetailMateri"
+                    android:text="Detail Materi 1"
+                    android:textAllCaps="false"
+                    android:textColor="#102755" />
+
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    android:backgroundTint="#E2EDFC"
+                    android:fontFamily="@font/poppins_semi_bold"
+                    android:onClick="redirectSubDetailMateri"
+                    android:text="Detail Materi 2"
+                    android:textAllCaps="false"
+                    android:textColor="#102755"
+                    android:layout_marginTop="10dp"/>
+
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    android:backgroundTint="#E2EDFC"
+                    android:fontFamily="@font/poppins_semi_bold"
+                    android:onClick="redirectSubDetailMateri"
+                    android:text="Detail Materi 3"
+                    android:textAllCaps="false"
+                    android:textColor="#102755"
+                    android:layout_marginTop="10dp"/>
+
+
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+    
+</ScrollView>

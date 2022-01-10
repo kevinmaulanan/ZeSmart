@@ -53,6 +53,7 @@
                 android:orientation="vertical">
 
                 <com.google.android.material.textfield.TextInputLayout
+
                     android:layout_width="match_parent"
                     android:layout_height="56dp"
                     android:layout_marginTop="23dp"
@@ -66,6 +67,7 @@
                     >
 
                     <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/email_register"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:background="#F6F7FA"
@@ -90,6 +92,7 @@
                     >
 
                     <com.google.android.material.textfield.TextInputEditText
+
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:background="#F6F7FA"
@@ -101,6 +104,7 @@
                 </com.google.android.material.textfield.TextInputLayout>
 
                 <com.google.android.material.textfield.TextInputLayout
+
                     android:layout_width="match_parent"
                     android:layout_height="56dp"
                     app:endIconMode="password_toggle"
@@ -113,6 +117,7 @@
                     >
 
                     <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/password_register"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:background="#F6F7FA"
@@ -147,6 +152,7 @@
                 </com.google.android.material.textfield.TextInputLayout>
 
                 <Button
+                    android:id="@+id/register"
                     android:layout_width="match_parent"
                     android:layout_height="60dp"
                     android:layout_marginTop="52dp"
@@ -158,7 +164,8 @@
                     android:textStyle="bold"
                     app:cornerRadius="15dp"
                     tools:ignore="DuplicateSpeakableTextCheck"
-                    android:fontFamily="@font/poppins_semi_bold"/>
+                    android:fontFamily="@font/poppins_semi_bold"
+                    android:onClick="doRegister"/>
 
                 <LinearLayout
                     android:layout_width="match_parent"

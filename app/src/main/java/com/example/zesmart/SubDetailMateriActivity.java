@@ -1,3 +1,4 @@
+
 package com.example.zesmart;
 
 import androidx.appcompat.app.ActionBar;
@@ -7,23 +8,19 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 
-public class ListMateriActivity extends AppCompatActivity {
+public class SubDetailMateriActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_list_materi);
+        setContentView(R.layout.activity_sub_detail_materi);
         ActionBar actionBar = getSupportActionBar();
         actionBar.hide();
-    }
+}
 
-    public void redirectDetailMateri(View view){
-        Intent redirectDetailMateri = new Intent(this, SubDetailMateriActivity.class);
+    public void redirectSubDetailMateri(View view){
+        Intent redirectDetailMateri = new Intent(this, DetailMateriActivity.class);
         startActivity(redirectDetailMateri);
-    }
 
-    public void redirectSubmitMateri(View view) {
-        Intent redirectSubmitMateri = new Intent(this, SubmitCategoryActivity.class);
-        startActivity(redirectSubmitMateri);
     }
 }
