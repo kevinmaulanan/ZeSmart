@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:padding="30dp">
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <View
+                android:layout_width="93dp"
+                android:layout_height="79dp"
+                android:background="@drawable/roubded_gift"
+                android:backgroundTint="#E2EDFC" />
+
+            <ImageView
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="12dp"
+                android:src="@drawable/baju" />
+
+        </RelativeLayout>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <TextView
+            android:id="@+id/textgift1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="Zestar T-Shirt"
+            android:textColor="#102755"
+            android:textSize="14sp"
+            android:fontFamily="@font/poppins_semi_bold"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="20dp"/>
+     <RelativeLayout
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/textgift2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="25dp"
+            android:fontFamily="@font/poppins_regular"
+            android:text="+10000 points"
+            android:textColor="#102755"
+            android:textSize="10sp"
+            tools:ignore="InvalidId" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:src="@drawable/coin" />
+     </RelativeLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

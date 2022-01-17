@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#FFFFFF"
+    tools:context=".RewardActivity">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <ImageView
+            android:id="@+id/imageView2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/image_reward"
+            />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Congratulations !"
+            android:textSize="24sp"
+            android:textColor="#102755"
+            android:fontFamily="@font/poppins_semi_bold"
+            android:gravity="center"
+            android:layout_marginTop="36dp"
+            android:lineHeight="34dp"
+            />
+    </LinearLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <View
+            android:id="@+id/button1"
+            android:layout_width="195dp"
+            android:layout_height="34dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/rounded3"
+            android:backgroundTint="#102755" />
+            <TextView
+                android:id="@+id/textView5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Score"
+                android:textColor="#FFFFFF"
+                android:textSize="18sp"
+                android:fontFamily="@font/poppins_regular"
+                android:layout_marginTop="20dp"
+                android:layout_marginStart="50dp"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <View
+            android:id="@+id/view3"
+            android:layout_width="343dp"
+            android:layout_height="167dp"
+            android:layout_marginStart="25dp"
+            android:layout_marginTop="11dp"
+            android:background="@drawable/rounded2"
+            android:backgroundTint="#E2EDFC" />
+
+        <ProgressBar
+            android:id="@+id/progressBar"
+            style="?android:attr/progressBarStyle"
+            android:layout_width="91dp"
+            android:layout_height="92dp"
+            android:layout_marginStart="50dp"
+            android:layout_marginTop="45dp"
+            android:background="#E2EDFC"
+            android:outlineAmbientShadowColor="#102755"
+            android:outlineSpotShadowColor="#102755"/>
+
+        <TextView
+            android:id="@+id/textView8"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="70dp"
+            android:layout_marginTop="70dp"
+            android:fontFamily="@font/poppins_semi_bold"
+            android:text="75%"
+            android:textColor="#102755"
+            android:textSize="24dp"
+
+            />
+
+        <TextView
+            android:id="@+id/textView9"
+            android:layout_width="185dp"
+            android:layout_height="43dp"
+            android:layout_marginStart="150dp"
+            android:layout_marginTop="50dp"
+            android:fontFamily="@font/poppins_semi_bold"
+            android:text="Well Done !"
+            android:textColor="#102755"
+            android:textSize="28dp" />
+        <TextView
+            android:id="@+id/textView10"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="100dp"
+            android:layout_marginStart="155dp"
+            android:text="Your UI skills has be improved"
+            android:textColor="#102755"
+            android:textSize="14dp"
+            android:fontFamily="@font/poppins_semi_bold"
+            />
+
+
+    </RelativeLayout>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        >
+        <Button
+            android:layout_width="350dp"
+            android:layout_height="57dp"
+            android:backgroundTint="#102755"
+            app:cornerRadius="8dp"
+            android:layout_marginStart="25dp"
+            android:layout_marginTop="11dp"
+            android:text="Get Your Gift"
+            android:onClick="redirectGift"
+            android:textAllCaps="false"
+            android:textSize="16sp"
+            android:fontFamily="@font/poppins_regular"
+            tools:ignore="OnClick" />
+
+    </LinearLayout>
+
+
+
+
+</LinearLayout>

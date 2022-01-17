@@ -91,7 +91,8 @@
                         android:textColor="#102755"
                         android:justificationMode="inter_word"
                         android:layout_marginRight="10dp"
-                        android:fontFamily="@font/poppins_regular">
+                        android:fontFamily="@font/poppins_regular"
+                        tools:ignore="OnClick">
 
                     </TextView>
 
