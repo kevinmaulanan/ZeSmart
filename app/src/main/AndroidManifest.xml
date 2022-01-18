@@ -16,7 +16,7 @@
             android:name=".ListMateriActivity"
             android:exported="true" />
         <activity
-            android:name=".SplashScreenActivity"
+            android:name=".MainActivity"
             android:exported="true" />
         <activity
             android:name=".DetailMateriActivity"
@@ -31,7 +31,10 @@
             android:name=".LoginActivity"
             android:exported="true" />
         <activity
-            android:name=".MainActivity"
+            android:name=".FragmentDashboard"
+            android:exported="true"/>
+        <activity
+            android:name=".SplashScreenActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -39,6 +42,11 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-    </application>
+
+
+
+        </application>
+
+
 
 </manifest>

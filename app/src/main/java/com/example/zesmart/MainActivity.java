@@ -2,6 +2,7 @@ package com.example.zesmart;
 
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.Fragment;
 
 import android.content.Intent;
 import android.content.SharedPreferences;
@@ -27,7 +28,7 @@ public class MainActivity extends AppCompatActivity {
             if (TextUtils.equals(checkOnBoarding, "true")) {
                 redirect = new Intent(MainActivity.this, LoginActivity.class);
             } else {
-                redirect = new Intent(MainActivity.this, OnBoardingActivity.class);
+                redirect = new Intent(MainActivity.this, LoginActivity.class);
             }
 
             startActivity(redirect);

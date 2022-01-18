@@ -31,8 +31,6 @@ public class LoginActivity extends AppCompatActivity {
     Pattern pattern;
     Matcher matcher;
     final String EMAIL_PATTERN = "^[_A-Za-z0-9-]+(\\.[_A-Za-z0-9-]+)*@[A-Za-z0-9]+(\\.[A-Za-z0-9]+)*(\\.[A-Za-z]{2,})$";
-    private View bottomNavigationView;
-    private Object navigation;
 
 
     @Override
@@ -63,7 +61,7 @@ public class LoginActivity extends AppCompatActivity {
                     try {
                         checkLogin();
                         final LoadingClass loadingDialog = new LoadingClass(LoginActivity.this);
-                        loadingDialog.startLoadingDialog(null, LoginActivity.this, ListMateriActivity.class);
+                        loadingDialog.startLoadingDialog(null, LoginActivity.this, FragmentDashboard.class);
                     } catch (Exception e) {
                         Toast.makeText(LoginActivity.this, e.getMessage(), Toast.LENGTH_LONG).show();
                     }
@@ -112,35 +110,5 @@ public class LoginActivity extends AppCompatActivity {
             throw (e);
         }
 
-        BottomNavigationView buttomNavigationView;
-        final BottomNavigationView.OnNavigationItemSelectedListener navigation = new BottomNavigationView.OnNavigationItemSelectedListener() {
-            @Override
-            public boolean onNavigationItemSelected(MenuItem menuItem) {
-                Fragment f = null;
-                switch (menuItem.getItemId()) {
-                    case R.id.menu_dashboard:
-                        f = new Fragment();
-                        break;
-                    case R.id.menu_activity:
-                        f = new FragmentActivity();
-                        break;
-                    case R.id.menu_schedule:
-                        f = new FragmentSchedule();
-                        break;
-                    case R.id.menu_profile:
-                        f = new FragmentProfile();
-                        break;
-                }
-                getSupportFragmentManager().beginTransaction().replace(R.id.container_fragment, f).commit();
-                return true;
-            }
-        };
-
-        setContentView(R.layout.activity_main);
-        bottomNavigationView = findViewById(R.id.bottom_navigation_menu);
-        bottomNavigationView.setOnClickListener((View.OnClickListener) navigation);
-
     }
-
-
 }
