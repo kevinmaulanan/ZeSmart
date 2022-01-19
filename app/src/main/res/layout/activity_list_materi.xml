@@ -109,43 +109,17 @@
                             android:layout_height="match_parent"
                             android:gravity="center_horizontal"
                             android:orientation="vertical"
-
                             android:paddingHorizontal="30dp"
-
                             android:paddingTop="30dp">
 
-                            <Button
-
+                            <LinearLayout
+                                android:id="@+id/layout_list_materi"
                                 android:layout_width="match_parent"
-                                android:layout_height="50dp"
-                                android:backgroundTint="#332A7C"
-                                android:fontFamily="@font/poppins_semi_bold"
-                                android:onClick="redirectDetailMateri"
-                                android:text="Detail Materi 1"
-                                android:textAllCaps="false"
-                                android:textColor="@color/white"></Button>
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical">
 
-                            <Button
-                                android:layout_width="match_parent"
-                                android:layout_height="50dp"
-                                android:layout_marginTop="10dp"
-                                android:backgroundTint="#332A7C"
-                                android:fontFamily="@font/poppins_semi_bold"
-                                android:onClick="redirectDetailMateri"
-                                android:text="Detail Materi 2"
-                                android:textAllCaps="false"
-                                android:textColor="@color/white"></Button>
+                            </LinearLayout>
 
-                            <Button
-                                android:layout_width="match_parent"
-                                android:layout_height="50dp"
-                                android:layout_marginTop="10dp"
-                                android:backgroundTint="#332A7C"
-                                android:fontFamily="@font/poppins_semi_bold"
-                                android:onClick="redirectDetailMateri"
-                                android:text="Detail Materi 3"
-                                android:textAllCaps="false"
-                                android:textColor="@color/white"></Button>
 
                         </LinearLayout>
 

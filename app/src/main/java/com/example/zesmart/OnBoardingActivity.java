@@ -3,8 +3,6 @@ package com.example.zesmart;
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.app.Activity;
-import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
@@ -13,8 +11,6 @@ import android.util.Log;
 import android.view.MotionEvent;
 import android.view.View;
 import android.widget.Button;
-
-import com.example.zesmart.auth.Auth;
 
 public class OnBoardingActivity extends AppCompatActivity {
     float x1, y1, x2, y2;
@@ -72,6 +68,7 @@ public class OnBoardingActivity extends AppCompatActivity {
     public void saveData(String key, String data) {
 
         SharedPreferences sharedPref = getSharedPreferences("MyPref", 0);
+
         SharedPreferences.Editor editor = sharedPref.edit();
         editor.putString(key, data);
         editor.commit();

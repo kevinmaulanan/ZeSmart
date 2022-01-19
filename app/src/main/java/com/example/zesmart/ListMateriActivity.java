@@ -7,6 +7,9 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 
+import com.example.zesmart.api.Category;
+import com.example.zesmart.api.Materi;
+
 public class ListMateriActivity extends AppCompatActivity {
 
     @Override
@@ -15,9 +18,16 @@ public class ListMateriActivity extends AppCompatActivity {
         setContentView(R.layout.activity_list_materi);
         ActionBar actionBar = getSupportActionBar();
         actionBar.hide();
+
+        Category category = new Category(ListMateriActivity.this);
+        category.categoryList();
     }
 
     public void redirectDetailMateri(View view){
+        int getId = (int) view.getTag();
+
+        Materi materi = new Materi(ListMateriActivity.this);
+        materi.materiList(getId);
         Intent redirectDetailMateri = new Intent(this, SubDetailMateriActivity.class);
         startActivity(redirectDetailMateri);
     }

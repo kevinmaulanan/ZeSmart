@@ -5,16 +5,14 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.text.TextUtils;
 import android.util.Log;
 import android.view.KeyEvent;
-import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.example.zesmart.auth.Auth;
+import com.example.zesmart.api.Auth;
 
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
@@ -30,17 +28,15 @@ public class LoginActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
         ActionBar actionBar = getSupportActionBar();
+        assert actionBar != null;
         actionBar.hide();
 
         try {
             TextView textRegister = findViewById(R.id.suruh_register);
 
-            textRegister.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    Intent pindahKeRegister = new Intent(LoginActivity.this,RegisterActivity.class);
-                    startActivity(pindahKeRegister);
-                }
+            textRegister.setOnClickListener(v -> {
+                Intent pindahKeRegister = new Intent(LoginActivity.this,RegisterActivity.class);
+                startActivity(pindahKeRegister);
             });
 
 
@@ -68,29 +64,22 @@ public class LoginActivity extends AppCompatActivity {
     }
 
     void doLogin() throws Exception {
-        try {
-            EditText password = findViewById(R.id.password);
-            String getPassword = password.getText().toString();
-            EditText email = findViewById(R.id.email);
-            String getEmail = email.getText().toString();
-            pattern = Pattern.compile(EMAIL_PATTERN);
-            matcher = pattern.matcher(getEmail);
+        EditText password = findViewById(R.id.password);
+        EditText email = findViewById(R.id.email);
+
+        String getPassword = password.getText().toString();
+        String getEmail = email.getText().toString();
+        pattern = Pattern.compile(EMAIL_PATTERN);
+        matcher = pattern.matcher(getEmail);
 
 
-            if (matcher.matches()) {
-                if (getEmail == null && getPassword == null) {
-                    throw new Exception("Email atau password salah!");
-                }
+        if (matcher.matches()) {
+            final Auth auth = new Auth(LoginActivity.this);
+            auth.doLogin(getEmail, getPassword);
 
-                final Auth auth = new Auth(LoginActivity.this);
-                auth.doLogin(getEmail, getPassword);
-
-            } else {
-                throw new Exception("Format email salah!");
-            }
-
-        } catch (Exception e) {
-            throw (e);
+        } else {
+            throw new Exception("Format email salah!");
         }
+
     }
 }

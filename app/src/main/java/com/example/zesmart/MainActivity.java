@@ -10,9 +10,7 @@ import android.os.Handler;
 import android.text.TextUtils;
 import android.util.Log;
 
-import com.example.zesmart.auth.Auth;
-
-import org.json.JSONObject;
+import com.example.zesmart.api.Auth;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -22,7 +20,7 @@ public class MainActivity extends AppCompatActivity {
         ActionBar actionBar = getSupportActionBar();
         assert actionBar != null;
         actionBar.hide();
-
+        Log.d("firebase test", "firebase");
         setContentView(R.layout.activity_splash_screen);
         new Handler().postDelayed(() -> {
             Intent redirect;

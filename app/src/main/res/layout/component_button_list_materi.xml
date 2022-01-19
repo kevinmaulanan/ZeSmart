@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Button xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:id="@+id/button_list_materi"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:backgroundTint="#332A7C"
+    android:fontFamily="@font/poppins_semi_bold"
+    android:onClick="redirectDetailMateri"
+    android:text="Detail Materi 1"
+    android:textAllCaps="false"
+    android:textColor="@color/white"
+
+    >
+
+
+    </Button>
+
+
+

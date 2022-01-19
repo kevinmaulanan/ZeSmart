@@ -92,7 +92,7 @@
                     >
 
                     <com.google.android.material.textfield.TextInputEditText
-
+                        android:id="@+id/username_register"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:background="#F6F7FA"
@@ -141,6 +141,7 @@
                     >
 
                     <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/confirm_password_register"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:background="#F6F7FA"
@@ -163,7 +164,7 @@
                     android:textSize="14sp"
                     android:textStyle="bold"
                     app:cornerRadius="15dp"
-                    tools:ignore="DuplicateSpeakableTextCheck"
+                    tools:ignore="DuplicateSpeakableTextCheck,UsingOnClickInXml"
                     android:fontFamily="@font/poppins_semi_bold"
                     android:onClick="doRegister"/>
 
