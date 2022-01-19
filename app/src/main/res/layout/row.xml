@@ -19,6 +19,7 @@
                 android:backgroundTint="#E2EDFC" />
 
             <ImageView
+                android:id="@+id/image"
                 android:layout_width="60dp"
                 android:layout_height="60dp"
                 android:layout_marginStart="15dp"
