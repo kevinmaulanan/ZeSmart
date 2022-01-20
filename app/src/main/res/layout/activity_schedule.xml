@@ -117,6 +117,51 @@
                     android:textColor="#102755"
                     android:textSize="14dp" />
         </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="25dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/view_schedule"
+                android:onClick="redirectFinalTest"
+                tools:ignore="OnClick,SpeakableTextPresentCheck,UsingOnClickInXml" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="50dp"
+                android:layout_marginTop="40dp"
+                android:fontFamily="@font/poppins_regular"
+                android:text="04"
+                android:textColor="#102755"
+                android:textSize="24sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="150dp"
+                android:layout_marginTop="35dp"
+                android:fontFamily="@font/poppins_regular"
+                android:text="Practice UX design"
+                android:textColor="#102755"
+                android:textSize="14sp"
+                tools:ignore="TouchTargetSizeCheck" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="170dp"
+                android:layout_marginTop="55dp"
+                android:fontFamily="@font/poppins_regular"
+                android:text="13:00 pm"
+                android:textColor="#102755"
+                android:textSize="14dp" />
+        </RelativeLayout>
+
 
 
 
