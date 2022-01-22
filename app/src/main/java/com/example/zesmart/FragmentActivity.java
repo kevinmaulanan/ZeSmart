@@ -9,16 +9,12 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
-import com.example.zesmart.api.Category;
+import com.example.zesmart.R;
 
-public class FragmentList extends Fragment {
+public class FragmentActivity extends Fragment {
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.dashboard,container,false);
-        Category category = new Category(getActivity());
-        category.categoryList(view);
-        return view;
+        return inflater.inflate(R.layout.fragment_activity,container,false);
     }
-
 }

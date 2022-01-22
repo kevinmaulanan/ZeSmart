@@ -25,6 +25,7 @@ import com.example.zesmart.ListMateriActivity;
 import com.example.zesmart.LoadingClass;
 import com.example.zesmart.LoginActivity;
 import com.example.zesmart.R;
+import com.example.zesmart.SubDetailMateriActivity;
 import com.example.zesmart.localstorage.LocalStorage;
 
 import org.json.JSONException;
@@ -44,12 +45,14 @@ public class SubCategory {
     }
 
     public void subCategoryList(int id) {
-        url = url + "/subcategory";
+        url = url + "/subcategory/" + id;
+        Log.i("url", url);
         final RequestQueue requestQueue = Volley.newRequestQueue(activity);
 
         final JsonArrayRequest objectRequest = new JsonArrayRequest(Request.Method.GET, url, null, response -> {
 
             final LayoutInflater inflater = (LayoutInflater) activity.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+            Log.i("Response api", response.toString());
             for (int i = 0; i < response.length(); i++) {
                 View myCompenent = inflater.inflate(R.layout.component_button_list_materi, null);
                 final Button buttonComponent = myCompenent.findViewById(R.id.button_list_materi);
@@ -60,10 +63,16 @@ public class SubCategory {
                 myCompenent.setLayoutParams(layoutParams);
                 try {
                     jsonObject = response.getJSONObject(i);
-                    String getCategory = jsonObject.getString("category");
+                    String getCategory = jsonObject.getString("subCategoryTitle");
                     int getId = jsonObject.getInt("id");
                     buttonComponent.setText(getCategory);
                     buttonComponent.setTag(getId);
+
+                    myCompenent.setOnClickListener(v -> {
+                        Intent redirectListMateri = new Intent(activity, SubDetailMateriActivity.class);
+                        redirectListMateri.putExtra("id", getId);
+                        activity.startActivity(redirectListMateri);
+                    });
 
                     mainLayout.addView(buttonComponent);
                 } catch (JSONException e) {

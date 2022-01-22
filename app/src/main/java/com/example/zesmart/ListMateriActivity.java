@@ -6,9 +6,11 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.TextView;
 
 import com.example.zesmart.api.Category;
 import com.example.zesmart.api.Materi;
+import com.example.zesmart.api.SubCategory;
 
 public class ListMateriActivity extends AppCompatActivity {
 
@@ -19,8 +21,18 @@ public class ListMateriActivity extends AppCompatActivity {
         ActionBar actionBar = getSupportActionBar();
         actionBar.hide();
 
-        Category category = new Category(ListMateriActivity.this);
-        category.categoryList();
+        Bundle extras = getIntent().getExtras();
+        if (extras != null) {
+            int value = extras.getInt("id");
+            String title = extras.getString("category");
+            TextView textView = (TextView) findViewById(R.id.title_category);
+            textView.setText(title);
+            SubCategory subCategory = new SubCategory(ListMateriActivity.this);
+            subCategory.subCategoryList(value);
+
+        }
+
+
     }
 
     public void redirectDetailMateri(View view){

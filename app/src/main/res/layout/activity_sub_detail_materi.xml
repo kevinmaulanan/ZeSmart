@@ -110,6 +110,7 @@
                 tools:ignore="MissingConstraints">
 
                 <Button
+                    android:id="@+id/title_subcategory"
                     android:layout_width="220dp"
                     android:layout_height="match_parent"
                     android:background="@drawable/rounded_layout_black"
@@ -137,40 +138,10 @@
             android:layout_marginHorizontal="20dp"
             android:layout_marginTop="20dp">
             <LinearLayout
+                android:id="@+id/layout_list_materi"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical">
-                <Button
-                    android:layout_width="match_parent"
-                    android:layout_height="100dp"
-                    android:backgroundTint="#E2EDFC"
-                    android:fontFamily="@font/poppins_semi_bold"
-                    android:onClick="redirectSubDetailMateri"
-                    android:text="Detail Materi 1"
-                    android:textAllCaps="false"
-                    android:textColor="#102755" />
-
-                <Button
-                    android:layout_width="match_parent"
-                    android:layout_height="100dp"
-                    android:backgroundTint="#E2EDFC"
-                    android:fontFamily="@font/poppins_semi_bold"
-                    android:onClick="redirectSubDetailMateri"
-                    android:text="Detail Materi 2"
-                    android:textAllCaps="false"
-                    android:textColor="#102755"
-                    android:layout_marginTop="10dp"/>
-
-                <Button
-                    android:layout_width="match_parent"
-                    android:layout_height="100dp"
-                    android:backgroundTint="#E2EDFC"
-                    android:fontFamily="@font/poppins_semi_bold"
-                    android:onClick="redirectSubDetailMateri"
-                    android:text="Detail Materi 3"
-                    android:textAllCaps="false"
-                    android:textColor="#102755"
-                    android:layout_marginTop="10dp"/>
 
 
             </LinearLayout>

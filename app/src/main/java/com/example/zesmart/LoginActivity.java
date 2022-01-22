@@ -1,7 +1,10 @@
 package com.example.zesmart;
 
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.Fragment;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -23,6 +26,7 @@ public class LoginActivity extends AppCompatActivity {
     Matcher matcher;
     final String EMAIL_PATTERN = "^[_A-Za-z0-9-]+(\\.[_A-Za-z0-9-]+)*@[A-Za-z0-9]+(\\.[A-Za-z0-9]+)*(\\.[A-Za-z]{2,})$";
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -30,6 +34,7 @@ public class LoginActivity extends AppCompatActivity {
         ActionBar actionBar = getSupportActionBar();
         assert actionBar != null;
         actionBar.hide();
+
 
         try {
             TextView textRegister = findViewById(R.id.suruh_register);
@@ -49,14 +54,18 @@ public class LoginActivity extends AppCompatActivity {
                     Toast.makeText(LoginActivity.this, e.getMessage(), Toast.LENGTH_LONG).show();
                 }
             });
+
+
         } catch (Exception e) {
             Log.i("test", e.getMessage());
             Toast.makeText(this, "Error", Toast.LENGTH_LONG).show();
         }
+
+
     }
 
     public boolean onKeyDown(int key_code, KeyEvent key_event) {
-        if (key_code== KeyEvent.KEYCODE_BACK) {
+        if (key_code == KeyEvent.KEYCODE_BACK) {
             super.onKeyDown(key_code, key_event);
             return false;
         }

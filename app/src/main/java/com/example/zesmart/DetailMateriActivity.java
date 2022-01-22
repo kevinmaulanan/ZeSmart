@@ -18,6 +18,7 @@ import android.widget.MediaController;
 import android.widget.ScrollView;
 import android.widget.VideoView;
 
+import com.example.zesmart.api.Materi;
 import com.google.android.material.tabs.TabLayout;
 
 public class DetailMateriActivity extends AppCompatActivity {
@@ -29,28 +30,28 @@ public class DetailMateriActivity extends AppCompatActivity {
         ActionBar actionBar = getSupportActionBar();
         assert actionBar != null;
         actionBar.hide();
-        Log.i("Log Content", "test");
-        getContent("materi");
+        Bundle extras = getIntent().getExtras();
+        if (extras != null) {
+            int value = extras.getInt("id");
+            Materi materi = new Materi(DetailMateriActivity.this);
+            materi.materiDetail(value);
+        }
+
 
         TabLayout tabLayout = (TabLayout) findViewById(R.id.tab_layout);
 
         tabLayout.addOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
             @Override
             public void onTabSelected(TabLayout.Tab tab) {
+                final Materi materi = new Materi(DetailMateriActivity.this);
                 switch (tab.getPosition()) {
+
                     case 0:
-                        getContent("materi");
+                       materi.getContent("materi");
                         break;
                     case 1:
-                        getContent("video");
-                        final VideoView videoView = findViewById(R.id.VideoDetailMater); //id in your xml file
-                        videoView.setVideoURI(Uri.parse("https://www.youtube.com/watch?v=HexFqifusOk&list=RDHexFqifusOk&start_radio=1")); //the string of the URL mentioned above
-
-                        videoView.start();
-                        MediaController ctlr = new MediaController(getApplicationContext());
-                        ctlr.setMediaPlayer(videoView);
-                        videoView.setMediaController(ctlr);
-                        videoView.requestFocus();
+                        materi.getContent("video");
+//
                         break;
                 }
             }
@@ -68,25 +69,4 @@ public class DetailMateriActivity extends AppCompatActivity {
 
     }
 
-    public void getContent(String content) {
-        ScrollView myLayout = null;
-        int getMyLayout = R.layout.component_materi;
-        // get a reference to the already created main layout
-        LinearLayout mainLayout = (LinearLayout) findViewById(R.id.tabs);
-        mainLayout.removeAllViews();
-
-        Log.i("Log Content", content);
-        Log.i("Log Content", String.valueOf(TextUtils.equals(content, "video")));
-        LayoutInflater inflater = getLayoutInflater();
-
-        if (TextUtils.equals(content, "video")) {
-            getMyLayout = R.layout.component_video;
-        }
-
-        myLayout = (ScrollView) inflater.inflate(getMyLayout, mainLayout, false);
-
-        // add our custom layout to the main layout
-        mainLayout.addView(myLayout);
-
-    }
 }

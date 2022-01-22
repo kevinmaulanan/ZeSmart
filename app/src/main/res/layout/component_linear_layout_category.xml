@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:id="@+id/button_list_materi"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fontFamily="@font/poppins_semi_bold"
+    android:textColor="@color/white"
+
+    >
+    <LinearLayout
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginBottom="10dp"
+        >
+        <LinearLayout
+            android:layout_width="80dp"
+            android:layout_height="90dp"
+            android:background="@drawable/rounded_layout_full"
+            android:layout_marginBottom="10dp"
+            >
+            <TextView
+
+                android:id="@+id/text_category"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="Test Kevin"
+                android:textColor="#102755"
+                android:gravity="center"
+                android:textSize="12dp"
+                android:fontFamily="@font/poppins_semi_bold"
+
+                />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>
+
+
+
+
+
+
+
+

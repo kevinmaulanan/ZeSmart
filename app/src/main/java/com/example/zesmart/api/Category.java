@@ -4,14 +4,20 @@ import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.graphics.Color;
 import android.preference.PreferenceManager;
+import android.text.Layout;
 import android.text.TextUtils;
 import android.util.Log;
+import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.ScrollView;
+import android.widget.TableLayout;
+import android.widget.TableRow;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.android.volley.AuthFailureError;
@@ -44,30 +50,63 @@ public class Category {
     }
 
 
-    public void categoryList() {
+    public void categoryList(View view) {
         url = url + "/category";
         final RequestQueue requestQueue = Volley.newRequestQueue(activity);
 
         final JsonArrayRequest objectRequest = new JsonArrayRequest(Request.Method.GET, url, null, response -> {
 
             final LayoutInflater inflater = (LayoutInflater) activity.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+
+            TableRow tr = new TableRow(inflater.getContext());
+            tr.setGravity(Gravity.CENTER);
+
+
+            final TableLayout tableLayout = view.findViewById(R.id.table_category);
             for (int i = 0; i < response.length(); i++) {
 
-                View myCompenent = inflater.inflate(R.layout.component_button_list_materi, null);
-                final Button buttonComponent = myCompenent.findViewById(R.id.button_list_materi);
-                LinearLayout mainLayout = (LinearLayout) activity.findViewById(R.id.layout_list_materi);
-                JSONObject jsonObject = null;
-                LinearLayout.LayoutParams layoutParams = new LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT, LinearLayout.LayoutParams.WRAP_CONTENT);
-                layoutParams.setMargins(0, 0,0, 30);
-                myCompenent.setLayoutParams(layoutParams);
+                View myCompenent = inflater.inflate(R.layout.component_linear_layout_category, null);
+                final TextView textViewComponent = myCompenent.findViewById(R.id.text_category);
+
                 try {
-                    jsonObject = response.getJSONObject(i);
+                    if (i == 0 || i  % 3 == 0)  {
+                        tableLayout.addView(tr);
+                        tr = new TableRow(inflater.getContext());
+                        tr.setGravity(Gravity.CENTER);
+                    }
+
+
+                    JSONObject jsonObject = response.getJSONObject(i);
                     String getCategory = jsonObject.getString("category");
                     int getId = jsonObject.getInt("id");
-                    buttonComponent.setText(getCategory);
-                    buttonComponent.setTag(getId);
 
-                    mainLayout.addView(buttonComponent);
+                    textViewComponent.setText(getCategory);
+                    textViewComponent.setTag(getId);
+                    myCompenent.setTag(getId);
+
+                    myCompenent.setOnClickListener(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View v) {
+                            Intent redirectListMateri = new Intent(activity, ListMateriActivity.class);
+                            redirectListMateri.putExtra("id", getId);
+                            redirectListMateri.putExtra("category", getCategory);
+                            activity.startActivity(redirectListMateri);
+
+                        }
+                    });
+
+                    tr.addView(myCompenent);
+
+                    if (i + 1  == response.length() && i > 2) {
+                        for (int j = 0; j < (3 - (i + 1) % 3); j++) {
+                            View myCompenent2 = inflater.inflate(R.layout.component_linear_layout_category, null);
+                            myCompenent2.setAlpha(0);
+                            tr.addView(myCompenent2);
+                        }
+                        tableLayout.addView(tr);
+
+                    }
+
                 } catch (JSONException e) {
                     e.printStackTrace();
                 }

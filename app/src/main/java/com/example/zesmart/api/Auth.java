@@ -13,6 +13,7 @@ import com.android.volley.RequestQueue;
 import com.android.volley.toolbox.HttpHeaderParser;
 import com.android.volley.toolbox.JsonObjectRequest;
 import com.android.volley.toolbox.Volley;
+import com.example.zesmart.FragmentDashboard;
 import com.example.zesmart.ListMateriActivity;
 import com.example.zesmart.LoadingClass;
 import com.example.zesmart.LoginActivity;
@@ -41,7 +42,7 @@ public class Auth  {
             String checkToken = sharedPref.getString("token", null);
             Log.i("token", checkToken);
 
-            activity.startActivity(new Intent(activity, ListMateriActivity.class));
+            activity.startActivity(new Intent(activity, FragmentDashboard.class));
         } catch (Exception e) {
             activity.startActivity(new Intent(activity, LoginActivity.class));
         }
@@ -60,7 +61,7 @@ public class Auth  {
                 LocalStorage localStorage = new LocalStorage(activity);
                 localStorage.setString("token", token);
                 loadingDialog.dissmissDialog();
-                final Intent pindahActivity = new Intent(activity, ListMateriActivity.class);
+                final Intent pindahActivity = new Intent(activity, FragmentDashboard.class);
                 activity.startActivity(pindahActivity);
 
             } catch (JSONException e) {

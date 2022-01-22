@@ -2,16 +2,12 @@ package com.example.zesmart.api;
 
 import android.app.Activity;
 import android.content.Context;
-import android.content.Intent;
 import android.content.SharedPreferences;
 import android.preference.PreferenceManager;
-import android.text.TextUtils;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
-import android.widget.Button;
-import android.widget.LinearLayout;
-import android.widget.ScrollView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.android.volley.AuthFailureError;
@@ -21,11 +17,8 @@ import com.android.volley.toolbox.HttpHeaderParser;
 import com.android.volley.toolbox.JsonArrayRequest;
 import com.android.volley.toolbox.JsonObjectRequest;
 import com.android.volley.toolbox.Volley;
-import com.example.zesmart.ListMateriActivity;
-import com.example.zesmart.LoadingClass;
-import com.example.zesmart.LoginActivity;
+import com.example.zesmart.FragmentProfile;
 import com.example.zesmart.R;
-import com.example.zesmart.localstorage.LocalStorage;
 
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -34,6 +27,7 @@ import java.io.UnsupportedEncodingException;
 import java.nio.charset.StandardCharsets;
 import java.util.HashMap;
 import java.util.Map;
+import java.util.zip.Inflater;
 
 public class Profile {
     private final Activity activity;
@@ -43,13 +37,28 @@ public class Profile {
         activity = myActivity;
     }
 
-    public void ProfileDetail() {
-        url += "/profile/detail";
+    public void ProfileDetail(View view) {
+        url += "/user/profile";
         final RequestQueue requestQueue = Volley.newRequestQueue(activity);
 
         final JsonObjectRequest objectRequest = new JsonObjectRequest(Request.Method.GET, url, null, response -> {
 
-            Log.i("response", response.toString());
+            try {
+                final String name = response.getString("name");
+                final String email = response.getString("email");
+                final String username = response.getString("username");
+                final TextView textViewName = (TextView) view.findViewById(R.id.profile_name);
+                final TextView textViewEmail = (TextView) view.findViewById(R.id.profile_email);
+                final TextView textViewUsername = (TextView) view.findViewById(R.id.profile_username);
+                textViewName.setText(name);
+                textViewEmail.setText(email);
+                textViewUsername.setText(username);
+            } catch (JSONException e) {
+                e.printStackTrace();
+            }
+
+
+
         }, error -> {
             try {
                 if (error.networkResponse.data != null) {
@@ -74,8 +83,7 @@ public class Profile {
             @Override
             public Map<String, String> getHeaders() throws AuthFailureError {
                 Map<String, String> params = new HashMap<String, String>();
-                SharedPreferences sharedPref = activity.getSharedPreferences("MyPref", 0);
-
+                SharedPreferences sharedPref =  PreferenceManager.getDefaultSharedPreferences(activity);
                 params.put("Authorization", sharedPref.getString("token", null));
                 return params;
             }

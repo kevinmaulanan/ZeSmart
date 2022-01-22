@@ -46,7 +46,7 @@
                 </LinearLayout>
 
                 <TextView
-                    android:id="@+id/text_or"
+                    android:id="@+id/title_category"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_toEndOf="@+id/garis_1"
@@ -54,7 +54,7 @@
                     android:text="Design"
                     android:textAlignment="center"
                     android:textColor="@color/black"
-                    android:textSize="26dp"
+                    android:textSize="20dp"
                     app:layout_widthPercent="60%" />
             </androidx.percentlayout.widget.PercentRelativeLayout>
         </LinearLayout>

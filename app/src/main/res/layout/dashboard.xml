@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="15dp"
+                    android:layout_marginTop="25dp">
+                        <ImageView
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:background="@drawable/example_profile"
+                            android:layout_marginLeft="23dp"/>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="35dp"
+                            android:layout_marginLeft="67dp"
+                            android:fontFamily="@font/poppins_semi_bold"
+                            android:gravity="center_vertical"
+                            android:text="Hi, username"
+                            android:textColor="#102755"
+                            android:textSize="16dp"
+                            android:textStyle="bold" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="30dp"
+                            android:gravity="right|center_vertical">
+
+                                <ImageView
+                                    android:layout_width="20dp"
+                                    android:layout_height="20dp"
+                                    android:layout_marginRight="23dp"
+                                    android:background="@drawable/notif" />
+                        </LinearLayout>
+
+                </RelativeLayout>
+
+                <ScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="60dp">
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginTop="20dp"
+                            android:orientation="vertical">
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginHorizontal="20dp"
+                                    android:layout_marginBottom="20dp"
+                                    android:orientation="vertical">
+                                        <ImageView
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                                android:background="@drawable/gambar"
+                                            />
+                                        <androidx.appcompat.widget.SearchView
+                                            android:id="@+id/search_action"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="50dp"
+                                            android:background="@drawable/bg"
+                                            android:icon="@drawable/search"
+                                            android:layout_marginHorizontal="44dp"
+                                            android:layout_marginTop="-30dp"
+                                            >
+                                        </androidx.appcompat.widget.SearchView>
+                                </LinearLayout>
+
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="vertical"
+                                    android:layout_marginHorizontal="30dp">
+                                        <TextView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:textStyle="bold"
+                                            android:textColor="#102755"
+                                            android:textSize="18dp"
+                                            android:text="Categories"
+                                            android:layout_marginBottom="15dp">
+
+                                        </TextView>
+                                        <TableLayout
+                                            android:id="@+id/table_category"
+                                            android:layout_width="fill_parent"
+                                            android:layout_height="wrap_content"
+                                            android:gravity="center"
+                                            android:orientation="vertical">
+
+
+
+                                        </TableLayout>
+                                </LinearLayout>
+
+                        </LinearLayout>
+                </ScrollView>
+
+
+        </RelativeLayout>
+
+
+
+</LinearLayout>
+
+

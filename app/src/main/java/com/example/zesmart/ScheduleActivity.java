@@ -17,7 +17,7 @@ public class ScheduleActivity extends AppCompatActivity {
             Fragment f = null;
             switch (item.getItemId()){
                 case R.id.dashboard:
-                    f = new FragmentDashboard();
+                    f = new Fragment();
                     break;
                 case R.id.list:
                     f = new FragmentList();

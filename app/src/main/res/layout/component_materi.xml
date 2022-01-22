@@ -17,14 +17,16 @@
 
 
             <TextView
+                android:id="@+id/text_material"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/detail_materi_content"
+                android:text=""
                 android:textSize="18dp"
                 android:textColor="#102755"
                 android:justificationMode="inter_word"
                 android:layout_marginRight="10dp"
-                android:fontFamily="@font/poppins_regular">
+                android:fontFamily="@font/poppins_regular"
+                android:layout_marginTop="10dp">
 
             </TextView>
 
