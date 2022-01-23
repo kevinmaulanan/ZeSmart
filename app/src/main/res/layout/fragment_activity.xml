@@ -1,18 +1,270 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
+<ScrollView
     xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
-    <TextView
+
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/txtActivity"
-        android:text="Ini halaman activity"
-        android:textSize="30sp"
-        android:textColor="@color/black"
-        android:gravity="center"
-        android:layout_marginTop="250dp" />
+        android:layout_height="match_parent"
+        android:layout_marginHorizontal="24dp"
+        android:layout_marginTop="37dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="My Course"
+            android:textSize="24dp"
+            android:textColor="#102755"
+            android:textStyle="bold"
+            android:fontFamily="@font/poppins_semi_bold"
+            android:gravity="center" />
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/image_activity"
+            android:layout_marginTop="15dp"
+            />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="25dp"
+            android:background="@drawable/rounded_layout_blue"
+            android:orientation="horizontal">
+            <androidx.percentlayout.widget.PercentRelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                >
+
+                <LinearLayout
+                    android:id="@+id/garis_1"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_centerVertical="true"
+                    app:layout_widthPercent="50%"
+                    android:background="@drawable/rounded_layout_white"
+                    >
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:text="OnGoing"
+                        android:textSize="16dp"
+                        android:textColor="#102755"
+                        android:textStyle="bold"
+                        android:fontFamily="@font/poppins_semi_bold"
+                        android:gravity="center">
+                    </TextView>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/garis_2"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_toEndOf="@+id/garis_1"
+                    app:layout_widthPercent="50%"
+                    android:layout_centerVertical="true"
+
+                    >
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:text="Complete"
+                        android:textSize="16dp"
+                        android:textColor="#102755"
+                        android:textStyle="bold"
+                        android:fontFamily="@font/poppins_semi_bold"
+                        android:gravity="center" />
+                </LinearLayout>
 
 
 
-</RelativeLayout>
+            </androidx.percentlayout.widget.PercentRelativeLayout>
+
+        </LinearLayout>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="25dp"
+            >
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+                <androidx.percentlayout.widget.PercentRelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="80dp"
+                    >
+
+                    <LinearLayout
+                        android:id="@+id/item_1"
+                        android:layout_width="0dp"
+                        android:layout_height="80dp"
+                        app:layout_widthPercent="25%"
+                        android:orientation="horizontal"
+                        android:background="@drawable/rounded_layout_item"
+                        android:gravity="center">
+                        <ImageView
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:background="@drawable/image_web_design"
+                            android:layout_marginLeft="-20dp"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/item_2"
+                        android:layout_width="0dp"
+                        android:layout_height="80dp"
+                        android:layout_toEndOf="@id/item_1"
+                        android:gravity="center_vertical"
+                        android:orientation="vertical"
+                        app:layout_widthPercent="75%">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/poppins_semi_bold"
+                            android:text="Web Design"
+                            android:textSize="18dp"
+                            android:textStyle="bold"
+                            android:layout_marginTop="-10dp"
+                            android:layout_marginLeft="10dp"/>
+
+                        <SeekBar
+                            android:id="@+id/seekBar"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:max="15"
+                            android:maxHeight="3dp"
+                            android:minHeight="3dp"
+                            android:progressDrawable="@drawable/progress_line"
+                            android:thumb="@drawable/thumb"/>
+
+
+                    </LinearLayout>
+
+
+                </androidx.percentlayout.widget.PercentRelativeLayout>
+
+
+                <androidx.percentlayout.widget.PercentRelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="80dp"
+                    android:layout_marginTop="25dp"
+                    >
+
+                    <LinearLayout
+                        android:id="@+id/item_mobile_1"
+                        android:layout_width="0dp"
+                        android:layout_height="80dp"
+                        app:layout_widthPercent="25%"
+                        android:orientation="horizontal"
+                        android:background="@drawable/rounded_layout_item"
+                        android:gravity="center">
+                        <ImageView
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:background="@drawable/image_mobile_developer"
+                            android:layout_marginLeft="-20dp"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/item_mobile_2"
+                        android:layout_width="0dp"
+                        android:layout_height="80dp"
+                        android:layout_toEndOf="@id/item_mobile_1"
+                        android:gravity="center_vertical"
+                        android:orientation="vertical"
+                        app:layout_widthPercent="75%">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/poppins_semi_bold"
+                            android:text="Mobile Developer"
+                            android:textSize="18dp"
+                            android:textStyle="bold"
+                            android:layout_marginTop="-10dp"
+                            android:layout_marginLeft="10dp"/>
+
+                        <SeekBar
+                            android:id="@+id/seekBar2"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:max="15"
+                            android:maxHeight="3dp"
+                            android:minHeight="3dp"
+                            android:progressDrawable="@drawable/progress_line"
+                            android:thumb="@drawable/thumb"/>
+
+
+                    </LinearLayout>
+
+
+                </androidx.percentlayout.widget.PercentRelativeLayout>
+
+                <androidx.percentlayout.widget.PercentRelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="80dp"
+                    android:layout_marginTop="25dp"
+                    >
+
+                    <LinearLayout
+                        android:id="@+id/item_ui_ux_1"
+                        android:layout_width="0dp"
+                        android:layout_height="80dp"
+                        app:layout_widthPercent="25%"
+                        android:orientation="horizontal"
+                        android:background="@drawable/rounded_layout_item"
+                        android:gravity="center">
+                        <ImageView
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:background="@drawable/image_ui_ux"
+                            android:layout_marginLeft="-20dp"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/item_ui_ux_2"
+                        android:layout_width="0dp"
+                        android:layout_height="80dp"
+                        android:layout_toEndOf="@id/item_ui_ux_1"
+                        android:gravity="center_vertical"
+                        android:orientation="vertical"
+                        app:layout_widthPercent="75%">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/poppins_semi_bold"
+                            android:text="UI / UX"
+                            android:textSize="18dp"
+                            android:textStyle="bold"
+                            android:layout_marginTop="-10dp"
+                            android:layout_marginLeft="10dp"/>
+
+                        <SeekBar
+                            android:id="@+id/seekBar3"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:max="15"
+                            android:maxHeight="3dp"
+                            android:minHeight="3dp"
+                            android:progressDrawable="@drawable/progress_line"
+                            android:thumb="@drawable/thumb"/>
+
+
+                    </LinearLayout>
+
+
+                </androidx.percentlayout.widget.PercentRelativeLayout>
+            </LinearLayout>
+
+        </ScrollView>
+    </LinearLayout>
+
+</ScrollView>
