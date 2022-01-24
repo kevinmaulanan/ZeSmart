@@ -2,16 +2,13 @@ package com.example.zesmart;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.content.Intent;
 import android.os.Bundle;
-import android.view.View;
 
-public class RewardActivity extends AppCompatActivity {
+public class TestActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_reward);
+        setContentView(R.layout.activity_test);
     }
-
 }

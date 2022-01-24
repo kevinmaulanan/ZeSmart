@@ -6,7 +6,7 @@
     <string name="or">or</string>
     <string name="password">Password</string>
     <string name="pertanyaan_register">Already have an account? <b>Log in</b></string>
-    <string name="pertanyaan_login">Don’t have an account? <b>Sign up</b></string>
+    <string name="pertanyaan_login">Don`t have an account? <b>Sign up</b></string>
     <string name="create_account">Create Account</string>
     <string name="confirm_password">Confirm Password</string>
     <string name="sign_up">Sign Up</string>
@@ -22,4 +22,5 @@
     <string name="detail">Detail</string>
     <string name="materi">Materi</string>
     <string name="video">Video</string>
+
 </resources>

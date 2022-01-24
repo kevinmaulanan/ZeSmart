@@ -1,9 +1,11 @@
 package com.example.zesmart;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -19,6 +21,15 @@ public class FragmentProfile extends Fragment {
         final Profile profile = new Profile(getActivity());
         View view = inflater.inflate(R.layout.fragment_profile,container,false);
         profile.ProfileDetail(view);
+
+        TextView textPoint = view.findViewById(R.id.point);
+        textPoint.setOnClickListener(v -> {
+            Intent intent = new Intent(getContext(), GiftActivity.class);
+            startActivity(intent);
+        });
+
         return view;
     }
+
+
 }

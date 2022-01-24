@@ -1,0 +1,393 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    android:orientation="vertical"
+    tools:context=".FinalTestActivity">
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <ImageButton
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/back"
+            tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="Final Test"
+            android:textColor="#102755"
+            android:textSize="24sp"
+            android:fontFamily="@font/poppins_semi_bold"
+            android:layout_marginStart="70dp"
+            android:layout_marginEnd="70dp"
+            />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="149dp"
+            android:layout_height="37dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginStart="15dp"
+            android:text="Hi,Rotamitanian"
+            android:textColor="#102755"
+            android:textSize="18sp"
+            android:textStyle="bold"
+             />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_marginTop="10dp">
+
+            <View
+                android:id="@+id/view3"
+                android:layout_width="370dp"
+                android:layout_height="160dp"
+                android:layout_marginTop="4dp"
+                android:background="@drawable/rounded2"
+                android:backgroundTint="#E2EDFC" />
+
+            <TextView
+                android:id="@+id/textView3"
+                android:layout_width="264dp"
+                android:layout_height="33dp"
+                android:layout_marginStart="90dp"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/poppins_semi_bold"
+                android:text="Are you ready for exam?"
+                android:textColor="#102755"
+                android:textSize="14sp" />
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <androidx.percentlayout.widget.PercentRelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="47dp"
+                    android:layout_marginStart="30dp">
+
+                    <View
+                        android:layout_width="47dp"
+                        android:layout_height="77dp"
+                        android:background="@drawable/rounded4"
+                        android:backgroundTint="#B5D4FF" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="10dp"
+                        android:fontFamily="@font/poppins_regular"
+                        android:text="0"
+                        android:textColor="#102755"
+                        android:textSize="36sp" />
+                </androidx.percentlayout.widget.PercentRelativeLayout>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <androidx.percentlayout.widget.PercentRelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="47dp"
+                    android:layout_marginStart="79dp">
+
+                    <View
+                        android:layout_width="47dp"
+                        android:layout_height="77dp"
+                        android:background="@drawable/rounded4"
+                        android:backgroundTint="#B5D4FF" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="10dp"
+                        android:fontFamily="@font/poppins_regular"
+                        android:text="7"
+                        android:textColor="#102755"
+                        android:textSize="36sp" />
+                </androidx.percentlayout.widget.PercentRelativeLayout>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <androidx.percentlayout.widget.PercentRelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="47dp"
+                    android:layout_marginStart="136dp">
+
+                    <View
+                        android:layout_width="47dp"
+                        android:layout_height="77dp"
+                        android:background="@drawable/rounded4"
+                        android:backgroundTint="#B5D4FF" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="10dp"
+                        android:fontFamily="@font/poppins_regular"
+                        android:text="3"
+                        android:textColor="#102755"
+                        android:textSize="36sp" />
+                </androidx.percentlayout.widget.PercentRelativeLayout>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <androidx.percentlayout.widget.PercentRelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="47dp"
+                    android:layout_marginStart="185dp">
+
+                    <View
+                        android:layout_width="47dp"
+                        android:layout_height="77dp"
+                        android:background="@drawable/rounded4"
+                        android:backgroundTint="#B5D4FF" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="10dp"
+                        android:fontFamily="@font/poppins_regular"
+                        android:text="6"
+                        android:textColor="#102755"
+                        android:textSize="36sp" />
+                </androidx.percentlayout.widget.PercentRelativeLayout>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <androidx.percentlayout.widget.PercentRelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="47dp"
+                    android:layout_marginStart="241dp">
+
+                    <View
+                        android:layout_width="47dp"
+                        android:layout_height="77dp"
+                        android:background="@drawable/rounded4"
+                        android:backgroundTint="#B5D4FF" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="10dp"
+                        android:fontFamily="@font/poppins_regular"
+                        android:text="1"
+                        android:textColor="#102755"
+                        android:textSize="36sp" />
+                </androidx.percentlayout.widget.PercentRelativeLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <androidx.percentlayout.widget.PercentRelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="290dp"
+                    android:layout_marginTop="47dp">
+
+                    <View
+                        android:layout_width="47dp"
+                        android:layout_height="77dp"
+                        android:background="@drawable/rounded4"
+                        android:backgroundTint="#B5D4FF" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="10dp"
+                        android:fontFamily="@font/poppins_regular"
+                        android:text="5"
+                        android:textColor="#102755"
+                        android:textSize="36sp" />
+                </androidx.percentlayout.widget.PercentRelativeLayout>
+            </LinearLayout>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Days"
+                    android:textSize="14sp"
+                    android:textColor="#102755"
+                    android:fontFamily="@font/poppins_regular"
+                    android:layout_marginTop="120dp"
+                    android:layout_marginStart="69dp"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Hours"
+                    android:textSize="14sp"
+                    android:textColor="#102755"
+                    android:fontFamily="@font/poppins_regular"
+                    android:layout_marginTop="120dp"
+                    android:layout_marginStart="170dp"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Minutes"
+                    android:textSize="14sp"
+                    android:textColor="#102755"
+                    android:fontFamily="@font/poppins_regular"
+                    android:layout_marginTop="120dp"
+                    android:layout_marginStart="270dp"/>
+
+
+        </RelativeLayout>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="44dp">
+
+            <View
+                android:id="@+id/button1"
+                android:layout_width="195dp"
+                android:layout_height="34dp"
+                android:background="@drawable/rounded3"
+                android:backgroundTint="#102755" />
+
+            <TextView
+                android:id="@+id/textView5"
+                android:layout_width="146dp"
+                android:layout_height="34dp"
+                android:layout_marginStart="56dp"
+                android:fontFamily="@font/poppins_regular"
+                android:text="Equipment"
+                android:layout_marginTop="5dp"
+                android:textColor="#FFFFFF"
+                android:textSize="16sp" />
+        </RelativeLayout>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#102755"
+            android:text="Computer"
+            android:textSize="14sp"
+            android:fontFamily="@font/poppins_regular"
+            android:layout_marginTop="30dp"
+            android:layout_marginStart="50dp"/>
+    </LinearLayout>
+    <androidx.percentlayout.widget.PercentRelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="20dp"
+        android:gravity="center">
+        <View
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_centerVertical="true"
+            android:background="#102755"
+            app:layout_widthPercent="85%" />
+    </androidx.percentlayout.widget.PercentRelativeLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#102755"
+            android:text="Computer"
+            android:textSize="14sp"
+            android:fontFamily="@font/poppins_regular"
+
+            android:layout_marginStart="50dp"/>
+    </LinearLayout>
+    <androidx.percentlayout.widget.PercentRelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="20dp"
+        android:gravity="center">
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_centerVertical="true"
+            android:background="#102755"
+            app:layout_widthPercent="85%" />
+    </androidx.percentlayout.widget.PercentRelativeLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#102755"
+            android:text="Computer"
+            android:textSize="14sp"
+            android:fontFamily="@font/poppins_regular"
+
+            android:layout_marginStart="50dp"/>
+    </LinearLayout>
+    <androidx.percentlayout.widget.PercentRelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="20dp"
+        android:gravity="center">
+        <View
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_centerVertical="true"
+            android:background="#102755"
+            app:layout_widthPercent="85%" />
+    </androidx.percentlayout.widget.PercentRelativeLayout>
+
+    <Button
+        android:id="@+id/buttonTest"
+        android:layout_width="343dp"
+        android:layout_height="56dp"
+       android:layout_marginStart="20dp"
+        android:backgroundTint="#102755"
+        android:text=" Start Test"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        android:fontFamily="@font/poppins_regular"
+        app:cornerRadius="10dp"
+        android:layout_marginTop="80dp"
+        android:onClick="pindah" />
+
+</LinearLayout>

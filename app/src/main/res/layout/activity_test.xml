@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ActivityTest">
+
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    >
+    <ImageButton
+        android:id="@+id/back"
+        android:layout_width="28dp"
+        android:layout_height="28dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/back"
+        tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Mobile Programming"
+            android:textStyle="bold"
+            android:textColor="#102755"
+            android:textSize="24sp"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="30dp"
+        />
+</LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        >
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:layout_marginLeft="15dp"
+        android:text="Question 1/15"
+        android:textSize="18sp"
+        android:textColor="#102755"
+        android:textStyle="bold"
+        android:fontFamily="@font/poppins_semi_bold"
+
+        />
+    </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+           >
+            <TextView
+                android:id="@+id/textView12"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="20dp"
+                android:textSize="14sp"
+                android:fontFamily="@font/poppins_semi_bold"
+                android:text="Use the following values in the program: x=10 and y=15. and how the result if used in the following program?
+               "
+                android:textColor="#102755"
+                 />
+        </LinearLayout>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                >
+                <View
+                    android:layout_width="343dp"
+                    android:layout_height="56dp"
+                    android:background="@drawable/rounded5"
+                    android:backgroundTint="#B5D4FF"
+                    android:layout_marginTop="40dp"
+                    android:layout_marginStart="30dp"
+                    />
+
+
+                <RadioButton
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_marginStart="40dp"
+                    android:layout_marginTop="40dp"
+                    android:focusableInTouchMode="true" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="80dp"
+                    android:layout_marginTop="55dp"
+                    android:fontFamily="@font/poppins_semi_bold"
+                    android:text="15 appears on the screen"
+                    android:textColor="#102755"
+                    android:textSize="14sp" />
+
+                <View
+                    android:layout_width="343dp"
+                    android:layout_height="56dp"
+                    android:background="@drawable/rounded5"
+                    android:backgroundTint="#B5D4FF"
+                    android:layout_marginTop="115dp"
+                    android:layout_marginStart="30dp"
+                    />
+
+
+                <RadioButton
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_marginStart="40dp"
+                    android:layout_marginTop="115dp"
+                    android:focusableInTouchMode="true" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="80dp"
+                    android:layout_marginTop="130dp"
+                    android:fontFamily="@font/poppins_semi_bold"
+                    android:text="5 appears on the screen"
+                    android:textColor="#102755"
+                    android:textSize="14sp" />
+
+                <View
+                    android:layout_width="343dp"
+                    android:layout_height="56dp"
+                    android:background="@drawable/rounded5"
+                    android:backgroundTint="#B5D4FF"
+                    android:layout_marginTop="195dp"
+                    android:layout_marginStart="30dp"
+                    />
+
+
+                <RadioButton
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_marginStart="40dp"
+                    android:layout_marginTop="195dp"
+                    android:focusableInTouchMode="true" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="80dp"
+                    android:layout_marginTop="210dp"
+                    android:fontFamily="@font/poppins_semi_bold"
+                    android:text="105 appears on the screen"
+                    android:textColor="#102755"
+                    android:textSize="14sp" />
+
+                <View
+                    android:layout_width="343dp"
+                    android:layout_height="56dp"
+                    android:background="@drawable/rounded5"
+                    android:backgroundTint="#B5D4FF"
+                    android:layout_marginTop="270dp"
+                    android:layout_marginStart="30dp"
+                    />
+
+
+                <RadioButton
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_marginStart="40dp"
+                    android:layout_marginTop="270dp"
+                    android:focusableInTouchMode="true" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="80dp"
+                    android:layout_marginTop="285dp"
+                    android:fontFamily="@font/poppins_semi_bold"
+                    android:text="25 appears on the screen"
+                    android:textColor="#102755"
+                    android:textSize="14sp" />
+            </RelativeLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            >
+            <Button
+                android:layout_width="100dp"
+                android:layout_height="53dp"
+                android:layout_marginLeft="275dp"
+                android:layout_marginTop="30dp"
+                android:backgroundTint="#102755"
+                android:text="Next"
+                android:textSize="14sp"
+                android:fontFamily="@font/poppins_semi_bold"
+                app:cornerRadius="10dp"
+                />
+
+
+        </LinearLayout>
+
+
+
+</LinearLayout>
+
