@@ -5,6 +5,8 @@ import android.app.Activity;
 import android.content.SharedPreferences;
 import android.preference.PreferenceManager;
 
+import org.json.JSONArray;
+import org.json.JSONObject;
 
 
 public class LocalStorage {
@@ -15,6 +17,14 @@ public class LocalStorage {
     }
 
     public void setString(String key, String data) {
+        SharedPreferences sharedPref = PreferenceManager.getDefaultSharedPreferences(activity);
+        SharedPreferences.Editor editor = sharedPref.edit();
+        editor.putString(key, data);
+        editor.commit();
+    }
+
+
+    public void setJson(String key, String data) {
         SharedPreferences sharedPref = PreferenceManager.getDefaultSharedPreferences(activity);
         SharedPreferences.Editor editor = sharedPref.edit();
         editor.putString(key, data);

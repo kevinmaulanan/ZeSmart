@@ -8,13 +8,16 @@
     <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
 
     <application
-        android:usesCleartextTraffic="true"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.ZeSmart">
+        android:theme="@style/Theme.ZeSmart"
+        android:usesCleartextTraffic="true">
+        <activity
+            android:name=".QuestActivity"
+            android:exported="true" />
         <activity
             android:name=".SubDetailMateriActivity"
             android:exported="true" />
@@ -29,8 +32,7 @@
             android:exported="true" />
         <activity
             android:name=".ActivityTest"
-            android:exported="true">
-        </activity>
+            android:exported="true"></activity>
         <activity
             android:name=".TestActivity"
             android:exported="true" />
@@ -60,8 +62,7 @@
             android:exported="true" />
         <activity
             android:name=".FragmentDashboard"
-            android:exported="true"/>
-
+            android:exported="true" />
         <activity
             android:name=".SplashScreenActivity"
             android:exported="true">
@@ -71,11 +72,6 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
-
-
-        </application>
-
-
+    </application>
 
 </manifest>

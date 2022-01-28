@@ -9,6 +9,7 @@
         <item name="colorSecondary">@color/colorSecondary</item>
         <item name="colorSecondaryVariant">@color/colorSecondaryPariant</item>
 
+
         <!-- Status bar color. -->
         <item name="colorOnSecondary">@color/black</item>
         <!-- Status bar color. -->

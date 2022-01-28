@@ -12,6 +12,7 @@ import android.text.TextUtils;
 import android.util.Log;
 
 import com.example.zesmart.api.Auth;
+import com.example.zesmart.api.Quest;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -34,6 +35,8 @@ public class MainActivity extends AppCompatActivity {
                 redirect = new Intent(MainActivity.this, OnBoardingActivity.class);
                 startActivity(redirect);
             }
+
+
 
 
             finish();

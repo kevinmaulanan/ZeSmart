@@ -6,6 +6,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.TextView;
 
 import com.example.zesmart.api.Category;
@@ -29,6 +30,15 @@ public class ListMateriActivity extends AppCompatActivity {
             textView.setText(title);
             SubCategory subCategory = new SubCategory(ListMateriActivity.this);
             subCategory.subCategoryList(value);
+
+            Button finalTest = (Button) findViewById(R.id.button_final_test);
+            finalTest.setOnClickListener(v -> {
+                Intent intent = new Intent(this, QuestActivity.class);
+                intent.putExtra("id", value);
+                intent.putExtra("category", title);
+                startActivity(intent);
+
+            });
 
         }
 
